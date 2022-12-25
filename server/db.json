@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "username": "john",
+      "email": "john.doe@example.com",
+      "password": "password",
+      "role": "admin"
+    },
+    {
+      "username": "test",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "description": "Description 1",
+      "price": 10,
+      "image": "image1.jpg"
+    }
+  ]
+}
