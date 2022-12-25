@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header > .navbar {
+    background-color: #7FA6AD;
+    color: #fff;
+    height: 112px;
+}
+
+.header-logo {
+    height: 60px;
+}
+
+.header-nav-item {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.navbar-collapse {
+    background-color: #7FA6AD;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        height: 60px;
+    }
+    header > .navbar > * {
+        height: 60px;
+    }
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #7FA6AD;
+    padding: 20px 40px;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+    padding-bottom: 12px;
+}
+
+.footer-item {
+    color: #000;
+}
+
+.gap-2 {
+    gap: .5rem;
+}

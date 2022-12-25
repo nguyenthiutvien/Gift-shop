@@ -9,7 +9,9 @@
       "role": "admin"
     },
     {
-      "username": "test",
+      "username": "kamie",
+      "password": "123",
+      "email": "tkamie1@mailinator.com",
       "id": 2
     }
   ],
