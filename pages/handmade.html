@@ -5,8 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handmade</title>
+    <link rel="stylesheet" href="/style/handAndStonePages.css">
+    <link rel="stylesheet" href="/style/variable.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- header -->
+        <div class="header">
+            <ul>
+                <li id="logo"><a href="#"><img src="/assets/img/logo.png" ></a></li>
+                <li><a href="#"><b>HOME</b></a></li>
+                <li><a href="#"><b>HANDMADE</b></a></li>
+                <li><a href="#"><b>STONE CARVING</b></a></li>
+                <li><a href="#"><b>ABOUT</b></a></li>
+                <li><a href="#"><b>CONTACT</b></a></li>
+                <li><a href="#"><i class="fas fa-user"> </i></a>LOGIN</li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+        <div class="container">
+                <div class="row">
+                    <div class="banner">	
+                    </div>
+                </div>
+        </div>
+        <section class="handmade" id="handmade">
+            <div class="handmade__container" id="handmade__container">
+                <h1>Handmade</h1>
+                <div class="handmade__product" id="handmade__product">
+                    <div class="filters filters__handmade" id="filters__handmade">
+                        <h2>Filter by</h2>
+                        <hr width="30%">
+                        <div>
+                            <form>
+                                <p>Price</p>
+                                <input type="radio" id="age1" name="age" value="30" onclick="show_filter_price1()" >
+                                <label for="age1">0.00$ - 30.00$</label><br>
+                                <input type="radio" id="age2" name="age" value="100" onclick="show_filter_price2()">
+                                <label for="age2">30.00$ - 100.00$</label><br>  
+                                <input type="radio" id="age3" name="age" value="150" onclick="show_filter_price3()">
+                                <label for="age3">100.00$ - 150.00$</label><br>
+                                <input type="radio" id="age3" name="age" value="200" onclick="show_filter_price4()">
+                                <label for="age3">150.00$ - 1.000.000$</label><br><br>
+                            
+                            </form>
+                        </div>
+                        <hr width="30%">
+                        <div>
+                            <form >
+                                <label for="color" >Color:</label>
+                                <select id="color__list" onchange="show_filter_color(this)">
+                                    <option value="white"  >White</option>
+                                    <option value="blue"  >Blue</option>
+                                    <option value="grey" >Grey</option>
+                                    <option value="brown" >Brown</option>
+                            </select>   
+                            </form>
+                                                    
+                        </div>
+                        <br>
+                        <br>
+                        <div onclick ="clear__filter()">Clear Filter</div>           
+                    </div>
+                    <div class="products__list products__list-handmade" id="products__list-handmade">
+
+                    </div>
+
+                   
+                </div>
+            </div>
+        </section>
+        <section class="view_products" id="view_products"></section>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="/assets/javascript/handmade.js"></script>
+
 </body>
 </html>
