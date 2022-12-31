@@ -11,6 +11,18 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 	<link rel="stylesheet" href="/style/home.css">
 	<title>Home</title>
+	<script>
+		var index = 1;
+		changeImg = function (){
+			var imgs = ["/assets/img/qua2.jpg", "/assets/img/qua1.jpg", "/assets/img/hopqua2.jpg"]
+			document.getElementById('img').src = imgs[index];
+			index++;
+			if(index==imgs.length){
+				index = 0;
+			}
+		}
+		setInterval(changeImg, 3000);
+	</script>
 </head>
 <body>
 	<div class="header">
@@ -27,50 +39,21 @@
 	</div>
 	<div class="container">
 			<div class="row">
-				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-					<div class="carousel-indicators">
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-					</div>
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img src="https://www.figma.com/file/UyruW4bI3rFbhyubpOk0gL/Untitled?node-id=90%3A116&t=Yz1vcLHqFW6q6fFd-4" style="width: 100%; height: 0%;" alt="" >
-							<div class="carousel-caption d-none d-md-block">
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img src="/assets/img/hopqua1.jpg" class="d-block w-100" alt="">
-							<div class="carousel-caption d-none d-md-block">
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img src="/assets/img/hopqua2.jpg" class="d-block w-100" alt="">
-							<div class="carousel-caption d-none d-md-block">
-							</div>
-						</div>
-					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Previous</span>
-					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="visually-hidden">Next</span>
-					</button>
+				<div class="image">
+					<img id="img" onclick="changeImg()" src="/assets/img/hopqua.jpg" alt="">
 				</div>
 			</div><br><br>
 			<div class="row">
-				<div class="col-4" id="img">
-					<a href="#"><img src="https://anhdep123.com/wp-content/uploads/2020/05/cay-xuong-rong-tai-tho-sieu-cute.jpg" alt="" style="width: 100%; height: 100%;"></a>
+				<div class="col-4" id="photo">
+					<a href="#"><img src="https://anhdep123.com/wp-content/uploads/2020/05/cay-xuong-rong-tai-tho-sieu-cute.jpg" alt="" style="width: 90%; height: 90%;"></a>
 				</div>
-				<div class="col-4" id="img">
-					<a href="#"><img src="https://cf.shopee.vn/file/a25cc55f34e013f893c55cf5f1da612d" alt="" style="width: 350px; height: 350px;"></a><br><br>
+				<div class="col-4" id="photo">
+					<a href="#"><img src="https://cf.shopee.vn/file/a25cc55f34e013f893c55cf5f1da612d" alt="" style="width: 300px; height: 240px;"></a><br><br>
 					<div class="square"></div>
 				</div>
-				<div class="col-4" id="img">
+				<div class="col-4" id="photo">
 					<div class="square1"></div><br>
-					<a href="#"><img src="https://cf.shopee.vn/file/a25cc55f34e013f893c55cf5f1da612d" alt="" style="width: 350px; height: 350px;"></a>	
+					<a href="#"><img src="https://salt.tikicdn.com/cache/w1200/ts/product/e2/06/a6/75a12581983542dffa33acbbb7754c44.jpg" alt="" style="width: 300px; height: 240px;"></a>	
 				</div>
 			</div><br><br>
 			<div class="row">
@@ -96,49 +79,49 @@
 	</div><hr><br>
 		<div class="h2"><h3>FEATURED PRODUCTS</h3></div><br>
 		<div class="content">
-			<div class="item1"><img src="/assets/img/image7.png" alt="" style="width: 250px;">
-			<p style="text-align: center;">Luxury Crarf <br> 
+			<div class="item"><figure><img id="image" src="/assets/img/image4.png" alt="" style="width: 250px;"></figure>
+			<p style="text-align: center;">Bicycle Form Alarm Clock<br> 
 			<span id="price">$12.00</span></p>
 			<button class="button">Quick View</button></div> 
 
-			<div class="item2"><img src="/assets/img/image6.png" alt="" style="width: 250px; height: 190px;">
+			<div class="item"><figure><img id="image" src="/assets/img/image6.png" alt="" style="width: 250px; height: 190px;"></figure>
+			<p style="text-align:centre">Amigurumi Rabbit<br>
+			<span id="price">$10.00</span> </p>
+			<button class="button">Quick View</button></div>
+
+			<div class="item"><figure><img id="image" src="/assets/img/image11.jpg" alt="" style="width: 250px; height: 190px;"></figure>
 			<p style="text-align:centre">Couple stone statue <br>
 			<span id="price">$10.00</span> </p>
 			<button class="button">Quick View</button></div>
 
-			<div class="item3"><img src="/assets/img/image4.png" alt="" style="width: 250px; height: 190px;">
-			<p style="text-align:centre">Couple stone statue <br>
-			<span id="price">$10.00</span> </p>
-			<button class="button">Quick View</button></div>
-
-			<div class="item4"><img src="/assets/img/image6.png" alt="" style="width: 250px; height: 190px;">
-			<p style="text-align:centre">Couple stone statue <br>
+			<div class="item"><figure><img id="image" src="/assets/img/image7.png" alt="" style="width: 250px; height: 190px;"></figure>
+			<p style="text-align:centre">Luxury Scarf<br>
 			<span id="price">$10.00</span> </p>
 			<button class="button">Quick View</button></div> <br>
 	    </div>
 		</div>
 		<div class="content1">
-				<div class="item1"><img src="/assets/img/image10.png" alt=""></div>
-				<div class="item2"><img src="/assets/img/hopqua2.jpg" alt="" style=" width: 600px; height: 316px;"></div>
+				<div class="item-img column-img"><figure class="figure-img"><img src="/assets/img/image10.png" alt=""></figure></div>
+				<div class="item-img column-img"><figure class="figure-img"><img src="/assets/img/hopqua2.jpg" alt="" style=" width: 600px; height: 316px;"></figure></div>
 		</div><br>
 			<div class="h2"><h3>NEW PRODUCTS</h3></div><br>
 			<div class="newProducts">
-				<div class="item1"><img src="/assets/img/image7.png" alt="" style="width: 250px;">
-				<p style="text-align: center;">Luxury Crarf <br> 
+				<div class="item"><figure><img id="image" src="/assets/img/image12.jpg" alt="" style="width: 250px; height: 190px;"></figure>
+				<p style="text-align: center;">Non La Handmade<br> 
 				<span id="price">$12.00</span></p>
 				<button class="button">Quick View</button></div> 
 
-				<div class="item2"><img src="/assets/img/image2.png" alt="" style="width: 250px; height: 190px;">
-				<p style="text-align:centre">Couple stone statue <br>
+				<div class="item"><figure><img id="image" src="https://voocbien.com/wp-content/themes/theme2015/images/thuyen-buom-vo-oc.jpg" alt="" style="width: 250px; height: 190px;"></figure>
+				<p style="text-align:centre">Couple stone statue <br> 
 				<span id="price">$10.00</span> </p>
 				<button class="button">Quick View</button></div>
 
-				<div class="item3"><img src="/assets/img/image4.png" alt="" style="width: 250px; height: 190px;">
-				<p style="text-align:centre">Couple stone statue <br>
+				<div class="item"><figure><img id="image" src="assets/img/xichlo.jpg" alt="" style="width: 250px; height: 190px;"></figure>
+				<p style="text-align:centre">Cyclos made of Bamboo<br>
 				<span id="price">$10.00</span> </p>
 				<button class="button">Quick View</button></div>
 
-				<div class="item4"><img src="/assets/img/image4.png" alt="" style="width: 250px; height: 190px;">
+				<div class="item"><figure><img id="image" src="/assets/img/mockhoa.jpg" alt="" style="width: 250px; height: 190px;"></figure>
 				<p style="text-align:centre">Couple stone statue <br>
 				<span id="price">$10.00</span> </p>
 				<button class="button">Quick View</button></div> <br>
