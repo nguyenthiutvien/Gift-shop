@@ -80,8 +80,76 @@
             </div>
         </section>
         <section class="view_products" id="view_products"></section>
+
+        <!--cart  -->
+        <section class="view_cart" id="view_cart">
+            <div class ="content_viewCart" id ="content_viewCart">
+                <div class ="content_left">
+                    <h2>My cart</h2>
+                    <hr>
+                    <div class=" product_list_in_view_cart" id="product_list_in_view_cart"></div>
+                </div>
+                <div class="other_infor">
+                    <div class="promo_code">
+                        <div>
+                            <button class="btn_promo_code" onclick="openPromo()">
+                                <i class="ri-edit-box-line"></i>
+                                Enter a promo code
+                            </button>
+                        </div>
+                        <div id="text_promo_code">
+                            <input type="text" id="promo_code">
+                            <input type="button" onclick="offer(); checkpromo()" value="Apply">
+                        </div>
+                    </div>
+                    <div class="note_cart">
+                        <div>
+                            <button class="btn_note_cart" onclick="openNote()">
+                            <i class="ri-message-2-line"></i>
+                            Add a note
+                            </button>
+                        </div>
+                        <div id ="text_note">
+                            <textarea name="note" id="note"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_right">
+                <h2>Order summary</h2>
+                <hr>
+                <div class="infor_subtotal">
+                    <div class="subtotal_right">
+                        <p>Subtotal</p>
+                        <p id="Subtotal">...</p>
+                    </div>
+                    <div class="subtotal_right">
+                        <p>Shipping</p>
+                        <p>Free</p>
+                    </div>
+                </div>
+           <hr>
+           <div class="subtotal_right">
+            <p>Total</p>
+            <p id="Total"></p>
+           </div>
+           <div>
+            <h2>Checkout</h2>
+            <form>
+                <label for="Pay_methods">Pay methods:</label>
+                <select  id="payMethod_list" onchange="">
+                    <option value="delivery">Payment on delivery</option>
+                    <option value="online"> Online payment</option>
+                </select>
+            </form>
+           </div>
+           <div class="btn_buy"> <button class="btn_buynow" onclick="">Buy Now</button>
+        </div>
+        </div>
+        </section>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="/assets/javascript/handmade.js"></script>
+        <script src="/assets/javascript/cart.js"></script>
 
 </body>
 </html>
