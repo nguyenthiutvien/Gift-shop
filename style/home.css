@@ -158,6 +158,134 @@ figure {
 		left: 125%;
 	}
 }
+.review {
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    text-align: center;
+    
+}
+
+.customer {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.review_customer img{
+    width: 250px; 
+    height: 220px; 
+    border-radius: 100%;
+}
 
 
+h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container {
+    padding-bottom: 30px;
+}
+
+#subscible {
+    background-image: url(/assets/img/Vietnam-Souvenirs.jpg);
+    background-repeat: no-repeat;
+	height: 50px;
+    background-size: 100%;
+    padding-bottom: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding-bottom: 500px;
+}
+
+.subscirebe  {
+    padding-top: 200px;
+    padding-left: 600px;
+
+}
+
+.subscirebe button {
+    width: 300px;
+}
+
+.bottom-footer {
+    background-color: #7FA7AD;
+    height: 300px;
+    position: relative;
+}
+
+.contact {
+    padding-top: 50px;
+    padding-left: 90px;
+    position: absolute;
+}
+
+.company {
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 380px;
+}
+
+.aboutus {
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 640px;
+}
+
+.btn-footer {
+    position: absolute;
+    padding-top: 40px;
+    padding-left: 900px;
+}
+
+.company ul {
+    list-style: none;
+}
+.company ul li a{
+    text-decoration: none;
+    color : black;
+}
+
+.company ul li {
+    margin-left: -38px;
+}
+
+.infor {
+    margin-top: 22px;
+}
+
+.aboutus p {
+    margin-top: 22px;
+}
+
+
+.btn {
+	color: white;
+	border-color: #ffff;
+}
+
+.btn1 {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 300px;
+	border-radius: 5px;
+	text-align: center;
+	position: relative;
+	bottom: -30px;
+	border: none;
+	height: 40px;
+}
+
+.feadback {
+	padding-left: 150px;
+	background-color:var(--bg-window);
+}
+
+.form-control {
+	margin-top: 38px;
+}
 

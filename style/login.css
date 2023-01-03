@@ -1,0 +1,115 @@
+.overlay__login { 
+    height:100%;
+    width: 100%;
+    /* display: none; */
+    position: fixed;
+    z-index: 14;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-window);
+    overflow-y:scroll;
+    /* overflow-x:hidden; */
+}
+
+/* page */
+/* .logins {
+    display: none;
+} */
+/* .login__page{
+    position: relative;
+} */
+.login__page .item__img .logins .login_page{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.logins img {
+    /* position: relative;
+    padding-top: 40px;
+    padding-left: 200px; */
+    width:100%;
+    height:100%;
+    object-fit: cover; 
+    object-position: 50% 50%;
+    vertical-align: middle;
+}
+#login_email, #login_password, #signUp__email, #signUp_password, #signUp_phone, #signUp_Address, #login_email_admin, #login_password_admin{
+    border: 1px solid black;
+}
+#text{
+    color: brown;
+    cursor: pointer;
+}
+.item__login, .item__signup{
+    width: 40%;
+    padding: 100px 15px;
+    margin: 0 auto;
+
+}
+.form__login h1,.form__signup h1{
+    font-size: var(--h1-font-size);
+    color: var(--title-color-teal)
+}
+.form__login label, .form__login p, .form__signup label{
+    color: var(--title-color-teal);
+}
+.form__login input , .form__signup input{
+    width: 100%;
+    height:40px;
+    background: none;
+    border:none;
+    border: 1px solid var(--title-color-teal);
+    outline:none;
+    text-align: center;
+}
+.form__login p{
+    margin-top: 10px;
+}
+.form__login p a{
+    color: rgb(185, 96, 96);
+
+}
+.form__login p a:hover{
+    border-bottom: 3px solid rgb(185, 96, 96);
+}
+.form__login ::placeholder, .form__signup ::placeholder{
+    text-align: center;
+    color: rgb(95, 95, 95);
+}
+
+
+.form__login .btn_signin, .form__signup .btn_signup, .btn_atc {
+    background: var(--title-color-teal);
+    width: 100%;
+    height: 40px;
+    border:none;
+    outline:none;
+    margin-top: 20px;
+    color: var(--title-color-white)
+}
+.form__login .btn_signin:hover,
+.form__signup .btn_signup:hover,
+.btn_atc:hover{
+    background: var(--bg-footer);
+}
+.overlay__login .close1{
+    position:absolute;
+    z-index: 10;
+    right: 0;   
+}
+.login__page{
+    position: relative;
+    
+}
+#failed{
+    margin-top: 20px;
+    color: rgb(185, 96, 96);
+}
+.form__signup p{
+    color: rgb(185, 96, 96);
+}
+.form__signup h2{
+    color: var(--text-navbar-after-hover)
+}
+/* .bug{
+    display:none;
+} */

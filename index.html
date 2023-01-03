@@ -10,11 +10,12 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 	<link rel="stylesheet" href="/style/home.css">
+
 	<title>Home</title>
 	<script>
-		var index = 1;
-		changeImg = function (){
-			var imgs = ["/assets/img/qua2.jpg", "/assets/img/qua1.jpg", "/assets/img/hopqua2.jpg"]
+		let index = 1;
+		const changeImg = function (){
+			let imgs = ["/assets/img/qua2.jpg", "/assets/img/qua1.jpg", "/assets/img/hopqua2.jpg"]
 			document.getElementById('img').src = imgs[index];
 			index++;
 			if(index==imgs.length){
@@ -28,12 +29,13 @@
 	<div class="header">
 		<ul>
 			<li id="logo"><a href="#"><img src="/assets/img/logo.png" ></a></li>
-			<li><a href="#"><b>Home</b></a></li>
-			<li><a href="#"><b>Handmade</b></a></li>
-			<li><a href="#"><b>Stone Carving</b></a></li>
-			<li><a href="#"><b>About</b></a></li>
-			<li><a href="#"><b>Contact</b></a></li>
-			<li><a href="#"><i class="fas fa-user">Login</i></a></li>
+			<li><a href="#"><b>HOME</b></a></li>
+			<li><a href="#"><b>HANDMADE</b></a></li>
+			<li><a href="#"><b>STONE CARVING</b></a></li>
+			<li><a href="#"><b>ABOUT</b></a></li>
+			<li><a href="#"><b>CONTACT</b></a></li>
+			<li><a href="/pages/login.html"><i class="fas fa-user"></i><b>LOGIN</b></a></li>
+			<link rel="stylesheet" href="/pages/login.html">
 			<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
 		</ul>
 	</div>
@@ -107,7 +109,7 @@
 			<div class="h2"><h3>NEW PRODUCTS</h3></div><br>
 			<div class="newProducts">
 				<div class="item"><figure><img id="image" src="/assets/img/image12.jpg" alt="" style="width: 250px; height: 190px;"></figure>
-				<p style="text-align: center;">Non La Handmade<br> 
+				<p class="text-center">Non La Handmade<br> 
 				<span id="price">$12.00</span></p>
 				<button class="button">Quick View</button></div> 
 
@@ -126,6 +128,75 @@
 				<span id="price">$10.00</span> </p>
 				<button class="button">Quick View</button></div> <br>
 			</div>
+			<div class="feadback">
+				<h1 class="customer">Customer Feedback</h1>
+				<div class="review">
+					<div class="review_customer"><img src="/assets/img/tien.jpg" alt="" ><br><br> <b> A Tiến</b><br>
+					<p>The product very nice and cheap. <br> I am very satisfied with the product </p></div>
+					<div class="review_customer"><img src="/assets/img/utzien.jpg" alt="" > <br><br> <b>Út Viên</b>  <br>
+					<p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
+					<div class="review_customer"><img src="/assets/img/hthang.jpg" alt="" > <br><br> <b>Hữu Thắng</b>  <br>
+					<p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
+				</div>
+			</div>
+	
+			<section id="subscible">
+				<div class="footer container-fluid">
+					<div class="top-footer" >
+						<div class="subscirebe">
+							<input placeholder="Enter your email here" class="btn1 "></input> <br><br>
+							<br> <br><button type="button" class="btn btn-outline-secondary">SUBSCRIBE NOW</button>
+
+						</div>
+					</div>
+			</section>
+			
+				<div class="bottom-footer">
+					<div class="contact">
+						<h4>CONTACT US</h4>
+						<div class="infor">
+							<span class="address">
+								<p> <i class="fa-solid fa-location-dot"></i>
+								Phuoc My, Son Tra, Da Nang</p>
+							</span>
+							<span class="pnumber">
+								<p> <i class="fa-solid fa-phone"></i>
+							   (+84) 38 498 6930</p>
+							</span>
+							<span class="email">
+								<p> <i class="fa-solid fa-envelope"></i>
+								 thangnguyen@.com</p>
+							</span>
+						</div>
+					</div>
+					<div class="company">
+						<h4>COMPANY</h4>
+						<ul>
+							<li><a href="#">HOME</a> </li>
+							<li><a href="">HANDMADE</a> </li>
+							<li><a href="">STONE CARVING</a></li>
+							<li><a href="">ABOUT</a></li>
+							<li><a href="">CONTACT</a></li>
+						</ul>
+					</div>
+					<div class="aboutus">
+						<h4>ABOUT US</h4>
+						<p>We will bring you the <br> best products, hope it is <br>
+						your good memory for <br> Danang City</p>
+						<div class="icon-ab">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+					<div class="btn-footer">
+						<h4>Get promo code now</h4>
+						<input type="text" placeholder="Enter your email here" class="form-control">
+						<br> <br><button type="button" class="btn btn-outline-secondary" style="margin-top:-35px">SUBSCRIBE NOW</button>
+					</div>
+				</div>
+			</div>
 </div>
+
 </body>
 </html>
