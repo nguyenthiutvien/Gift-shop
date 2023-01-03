@@ -289,3 +289,8 @@ h2 {
 	margin-top: 38px;
 }
 
+
+.carousel-item > img{
+	height: 600px;
+	object-fit: cover;
+}
