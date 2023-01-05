@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="myNav__login" class="overlay__login">
-        <button onclick="closeNav__login();openHomePage()" class="close1"><i class="ri-close-circle-line"></i></button>
+       <button onclick="closeNav__login();openHomePage()" class="close1"><a href="/index.html" class="linkHome"><i class="ri-close-circle-line"></i></a></button>
         <div class="login__page">
             <div class="item__img">
                 <div class="logins user ">
@@ -26,7 +26,7 @@
                                 <label class="login_email" >Email</label>
                                 <input type="text" id="login_email" placeholder="test@gmail.com">
                                 <label class="login_password" >Password</label>
-                                <input type="password" id="login_password" placeholder=".......">
+                                <input type="password" id="login_password" placeholder="*******">
                                 <p>No account <a onclick="next__page(1)" id="text">Create one?</a></p>
                                 <p>Sign in with <a onclick="next__page(-1)" id="text">Admin?</a></p>
                                 <button type="button" onclick="sign_in_account()" class="btn_signin">Sign In</button>
@@ -45,7 +45,7 @@
                                 <label class="signUp__email" id="signUp__email1">Email <p class="bug" id="bug1">*</p></label>
                                 <input type="text" id="signUp__email" placeholder="test@gmail.com" onclick="close_bug_email();close_bug2_email()">
                                 <label class="signUp_password" id="signUp_password1" >Password <p class="bug" id="bug2">*</p></label>
-                                <input type="password" id="signUp_password" placeholder="......." onclick="close_bug_password()">
+                                <input type="password" id="signUp_password" placeholder="*******" onclick="close_bug_password()">
                                 <label class="signUp_phone"id="signUp_phone1" >Phone Number <p class="bug" id="bug3">*</p></label>
                                 <input type="text" id="signUp_phone" placeholder="Enter here" onclick="close_bug_phone_number()">
                                 <label class="signUp_Address" id="signUp_Address1" >Address <p class="bug" id="bug4">*</p></label>
@@ -69,8 +69,8 @@
                                 <label class="login_email" >Email</label>
                                 <input type="text" id="login_email_admin" placeholder="test@gmail.com">
                                 <label class="login_password" >Password</label>
-                                <input type="password" id="login_password_admin" placeholder=".......">
-                                <p>Sign in with <a onclick="next__page(1)">User?</a></p>
+                                <input type="password" id="login_password_admin" placeholder="*******">
+                                <p>Sign in with <a onclick="next__page(1)" id="text">User?</a></p>
                                 <button type="button" onclick="sign_in_account_admin()" class="btn_signin">SIGN IN</button>
                             </form>
                         </div>
@@ -79,6 +79,7 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/assets/javascript/login.js"></script>
 </body>
 </html>
