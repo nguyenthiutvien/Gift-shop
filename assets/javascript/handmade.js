@@ -37,75 +37,6 @@ function getData(id){
     return axios(url_product +"/" +id)
 }
 
-// Xem san pham chi tiet
-// function viewProducts_handmade(id){
-//     getData(id)
-//     .then((res)=>{
-//         var pro =res.data;
-//         document.getElementById('view_products').innerHTML+=`
-//         <div class ="view_product" id="view_product">
-//         div class= "view_img">
-//         <div class="view_img">
-//         <div id="view_img${pro.id}">
-//             <img src ="${pro.image}" alt="">
-//         </div>
-//         <div class = "info_pro" id="infor_pro"${pro.id}">
-//             <p>${pro.infor}<p>
-//         </div>
-//     </div>
-
-//     <div class ="view_infor">
-//         <div id ="view_pro-name">
-//             <h1> ${pro.name}</h1>
-//             <p id ="view_pro"> SKU:000$${pro.id}</p>
-//         </div>
-//     </div>
-//     <div class="view__pro-price">
-//         <p>${pro.price}</p>
-//     </div>
-//     <div id = "view_pro-color">
-//         <p>Color: ${pro.type.color}</p>
-//     </div>
-//     <div>   
-//         <label class="list-img-color">
-//             <input type ="radio" name ="radio">
-//             <span class="check_color-pro" id ="view_pro-check" style ="background-color: ${pro.type.color};"></span>
-//         </label>
-//     </div>
-//     <div id ="quantity_pro">
-//         <p> Quantity</p>
-//         <input type="number" id="quantity" min="1" max="100" value="1">
-//     </div>
-//     <button type ="button" class="btn" onclick=" add_to_cart(${pro.id})"> Add to cart</button>
-//     <button type="button" class="btn" onclick="removeItemViewCart(); close_section_product(); openViewCart(); buyNow(${pro.id})"> Buy Now </button>
-//     <div class=infor-other">
-//         <button class="accordion">PRODUCT INFO </button>
-//         <div class="panel">
-//             <p> I'm a product detail. I'm great place to add more information about your product such as sizing,material, care and cleaning instructions.</p>
-//         </div>
-//     </div>
-//     <div class="icon-media">
-//             <i class="ri-messenger-fill"></i>
-//             <i class="ri-facebook-fill"></i>
-//             <i class="ri-twitter-fill"></i>
-//             <i class="ri-pinterest-fill"></i>
-//     </div>
-//     </div>
-// </div>
-// </div>
-// </div> `
-
-// document.getElementById('view_products').innerHTML +=`
-// <button onclick="open_section_handmade()" class="close1" id="close1_pr"> <i class="ri-close-circle-line"></i></button>`;
-// open_view_page_handmade();
-    
-//     })
-// }
-// an trang khi bam vao san pham
-// function open_view_page_handmade(){
-//         document.getElementById('handmade'.style.display="none");
-//         document.getElementById('view_products').style.display="block";
-// }
 
 function viewProducts_handmade(id){
     getData(id)
@@ -142,7 +73,7 @@ function viewProducts_handmade(id){
             <p>Quantity</p>
             <input type="number" id="quantity" min="1" max="100" value="1">
         </div>
-        <button type="button" class="btn_atc" onclick=" add_to_cart(${pro.id})">Add to Cart</button>
+        <button type="button" class="btn_atc" onclick="add_to_cart(${pro.id})">Add to Cart</button>
         <button type="button" class="btn_atc" onclick="removeItemViewCart();close__section_product();openViewCart();buyNow(${pro.id})">Buy Now</button>
         <div class="info-other">
             <button class="accordion">PRODUCT INFO</button>
@@ -411,3 +342,7 @@ axios.get(url_product)
     })
     
 }
+
+// cart
+
+
