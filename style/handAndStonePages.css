@@ -16,6 +16,17 @@
 	margin: 40px 80px 0px 0px;
 	padding: auto;
 }
+#countpro{
+    border-radius: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height:20px;
+    border: 1px solid  ;
+}
 
 
 .header ul li a{
