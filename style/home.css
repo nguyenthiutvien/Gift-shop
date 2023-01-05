@@ -21,6 +21,7 @@
 	--body-font: 'Poppins', sans-serif;
 	/* #### button  ##### */
 }
+/* header */
 #logo{
 	position: relative;
 	bottom: 90px;
@@ -159,6 +160,11 @@
 }
 
 
+/* slideshow */
+.carousel{
+	position: relative;
+	bottom: 16px;
+}
 .square{
 	height: 240px;
 	width: 300px;
@@ -192,7 +198,7 @@ hr{
 	width: 85%;
 	background-color: black;
 }
-
+/* product */
 .content {
 	display: grid;
 	grid-template-columns: 300px 300px 300px 300px;
@@ -399,6 +405,9 @@ h2 {
 .feadback {
 	padding-left: 150px;
 	background-color:var(--bg-window);
+}
+.customer{
+	color: var(--main-color);
 }
 
 .form-control {

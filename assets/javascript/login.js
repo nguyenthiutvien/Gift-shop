@@ -35,7 +35,7 @@ function sign_in_account() {
 // Thông báo đăng nhập thành công
 function sign_in_successful() {
   var content =
-    "<h1>Hi! Welcome to Indoor </h1>" +
+    "<h1>Hi! Welcome to Sourvier Da Nang </h1>" +
     "<br><p>Change the look of your house, change the perspective of others</p>";
   document.getElementById("item__login").innerHTML = content;
 }
@@ -103,7 +103,12 @@ function close_bug2_email() {
   var child = document.getElementById("bug_mail");
   parent.removeChild(child);
 }
+function change_account_block() {
+  //block sau khi đăng nhập
+  document.getElementById("nav__account").style.display = "block";
+  document.getElementById("nav__account_moblile").style.display = "block";
 
+}
 var login__page = 1;
 showpage(login__page);
 
@@ -124,4 +129,34 @@ function showpage(n) {
   }
   pages[login__page - 1].style.display = "block";
 }
+const setAccount = () => {
+  var cusId = window.localStorage.getItem(CUSID);
+  change_login_none();
+  change_account_block();
+  axios.get(url_customers + "/" + cusId).then((res) => {
+    var a =document.querySelectorAll(".nav__account");
+         for(var i =0; i<a.length; i++){
+           a[i].innerHTML=`
+           <i class="ri-account-circle-line"></i>` + res.data.email;
+         }
+  });
+};
+function openNav__login() {
+  // mở của sổ login
+  document.getElementById("myNav__login").style.display = "block";
+}
 
+function closeNav__login() {
+  // đóng cửa sổ login
+  document.getElementById("myNav__login").style.display = "none";
+}
+function change_login_none() {
+  // none sau khi đăng nhập
+  document.getElementById("nav__login").style.display = "none";
+
+}
+function change_account_block() {
+  //block sau khi đăng nhập
+  document.getElementById("nav__account").style.display = "block";
+
+}
