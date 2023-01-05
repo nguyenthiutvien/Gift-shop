@@ -217,11 +217,11 @@ h2 {
 .subscirebe button {
     width: 300px;
 }
-
+/* footer */
 .bottom-footer {
     background-color: #7FA7AD;
     height: 300px;
-    position: relative;
+    padding-left: 80px;
 }
 
 .contact {
@@ -302,4 +302,10 @@ h2 {
 .carousel-item > img{
 	height: 600px;
 	object-fit: cover;
+}
+hr{
+	position: relative;
+	left: 10px;
+	width: 70px;
+	border: 2px solid var(--text-color);
 }
