@@ -160,3 +160,55 @@ function change_account_block() {
   document.getElementById("nav__account").style.display = "block";
 
 }
+function change_login_none() {
+  // none sau khi đăng nhập
+  document.getElementById("nav__login").style.display = "none";
+  // document.getElementById("nav__login_mobile").style.display = "none";
+
+ }
+function change_account_block() {
+  //block sau khi đăng nhập
+  document.getElementById("nav__account").style.display = "block";
+  // document.getElementById("nav__account_moblile").style.display = "block";
+
+}
+function change_account_none() {
+  // none sau khi đăng xuất
+  document.getElementById("nav__account").style.display = "none";
+  document.getElementById("nav__account_moblile").style.display = "none";
+}
+// login with admin
+
+const url_ADMIN="https://61c16f3d9dbcca0017c81ed3.mockapi.io/api/AcountADMIN";
+
+function sign_in_account_admin() {
+  var email = document.getElementById("login_email_admin").value;
+  var password = document.getElementById("login_password_admin").value;
+  axios.get(url_ADMIN).then((res) => {
+    var adminArr = res.data;
+    for (var admin of adminArr) {
+      if (email == admin.email && password == admin.password) {
+        window.location.href="http://172.29.128.1:5500/PROJECT/admin.html"
+    }
+  }
+  });
+
+}
+
+function send(){
+  var email = document.getElementById("emailuser").value;
+  sendEmail(email);
+}
+
+// gửi Email
+function sendEmail(email) {
+	return Email.send({
+	Host: "smtp.gmail.com",
+	Username : "viennguyen.com",
+	Password : "123456789",
+	To : `${email}`,
+	From : "ntuv003@gmail.com",
+	Subject : "Promo code form INDOOR",
+	Body : "Promo code: ABCD",
+	});
+}
