@@ -44,7 +44,17 @@
 	color: rgb(244, 236, 236);
 }
 
-
+#countpro{
+    border-radius: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height:20px;
+    border: 1px solid  ;
+}
 
 .about .contenter__about .About .text_about h2{
     font-size: 50px;

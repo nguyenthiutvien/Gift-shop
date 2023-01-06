@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stoneCarving</title>
+    <link rel="stylesheet" href="/style/handAndStonePages.css">
+    <link rel="stylesheet" href="/style/variable.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/style/home.css"> -->
+</head>
+<body>
+    <!-- header -->
+        <div class="header">
+            <ul>
+                <li id="logo"><a href="#"><img src="/assets/img/logo.png" ></a></li>
+                <li><a href="/index.html"><b>HOME</b></a></li>
+                <li><a href="/pages/handmade.html"><b>HANDMADE</b></a></li>
+                <li><a href="/pages/StoneCarving.html"><b>STONE CARVING</b></a></li>
+                <li><a href="/pages/about.html"><b>ABOUT</b></a></li>
+                <li><a href="/pages/contact.html"><b>CONTACT</b></a></li>
+                <li><a href="/pages/login.html"><i class="fas fa-user"> </i></a><b>LOGIN</b></li>
+                <li><a onclick="openCart()" ><i class="fas fa-shopping-cart"></i><p id="countpro1">0</p></a></li>
+
+            </ul>
+        </div>
+            <div class="container">
+                    <div class="row">
+                        <div class="banner">	
+                        </div>
+                    </div>
+            </div>
+            <section class="stoneCarving" id="stoneCarving">
+                <div class="stoneCarving__container" id="stoneCarving__container">
+                    <h1>StoneCarving</h1>
+                    <div class="stoneCarving__product" id="stoneCarving__product">
+                        <div class="filters filters__stoneCarving" id="filters__stoneCarving">
+                            <h2>Filter by</h2>
+                            <hr width="30%">
+                            <div>
+                                <form>
+                                    <p>Price</p>
+                                    <input type="radio" id="age1" name="age" value="30" onclick="show_filter_price1()" >
+                                    <label for="age1">0.00$ - 30.00$</label><br>
+                                    <input type="radio" id="age2" name="age" value="100" onclick="show_filter_price2()">
+                                    <label for="age2">30.00$ - 100.00$</label><br>  
+                                    <input type="radio" id="age3" name="age" value="150" onclick="show_filter_price3()">
+                                    <label for="age3">100.00$ - 150.00$</label><br>
+                                    <input type="radio" id="age3" name="age" value="200" onclick="show_filter_price4()">
+                                    <label for="age3">150.00$ - 1.000.000$</label><br><br>
+                                
+                                </form>
+                            </div>
+                            <hr width="30%">
+                            <div>
+                                <form >
+                                    <label for="color" >Color:</label>
+                                    <select id="color__list" onchange="show_filter_color(this)">
+                                        <option value="white"  >White</option>
+                                        <option value="blue"  >Blue</option>
+                                        <option value="grey" >Grey</option>
+                                        <option value="brown" >Brown</option>
+                                </select>   
+                                </form>
+                                                        
+                            </div>
+                            <br>
+                            <br>
+                            <div onclick ="clear__filter()">Clear Filter</div>           
+                        </div>
+                        <div class="products__list products__list-stoneCarving" id="products__list-stoneCarving">
+    
+                        </div>
+    
+                       
+                    </div>
+                </div>
+            </section>
+            <!-- view products -->
+            <section class="view_products" id="view_products"></section>
+
+            <!-- cart -->
+            <div id="myCart" class="overlay__cart">
+                <button onclick="closeCart()" class="close1"><i class="ri-close-circle-line"></i></button>
+                <div class="header_cart">
+                    <span><h2>My Cart</h2></span> 
+                </div>
+                <div class="content__cart">
+                    <table class="cart-table">
+                        <tbody id="tbody_cart">
+                            
+        
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer_sub">
+                    <div class="cart-sub">
+                        <div class="cart-sub-title">Subtotal</div>
+                        <div class="cart-sub-total" id="cart-sub-total"></div>
+                    </div>
+                    <button id="viewCart" onclick="remove__view_product();removeItemViewCart();viewCart();openViewCart()">View Cart</button>
+                </div>
+            </div>
+            <!-- view cart -->
+
+            <section class="view_cart" id="view_cart">
+                <div class="content_viewCart" id="content_viewCart">
+                    <div class="content_left">
+                        <h2>My cart</h2>
+                        <hr>
+                        <div class="product_list_in_view_cart" id="product_list_in_view_cart">
+                            
+    
+                        </div>
+                        <div class="other_infor">
+                            <div class="promo_code">
+                                <div>
+                                    <button class="btn_promo_code" onclick="openPromo()">
+                                        <i class="ri-edit-box-line"></i>
+                                        Enter a promo code
+                                    </button>
+                                </div>
+                                <div id="text_promo_code">
+                                    <input type="text" id="promo_code">
+                                    <input type="button" onclick="offer();checkpromo()" value="Apply">
+                                </div>
+                            </div>
+                            <div class="note_cart">
+                                <div>
+                                    <button class="btn_note_cart" onclick="openNote()">
+                                        <i class="ri-message-2-line"></i>
+                                        Add a note
+                                    </button>
+                                </div>
+                                <div id="text_note">
+                                    <textarea name="note" id="note" ></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_right">
+                        <h2>Order summary</h2>
+                        <hr>
+                        <div class="infor_subtotal">
+                            <div class="subtotal_right">
+                                <p>Subtotal</p>
+                                <p id="Subtotal">...</p>
+                            </div>
+                            <div class="subtotal_right">
+                                <p>Shipping</p>
+                                <p>Free</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="subtotal_right">
+                            <p>Total</p>
+                            <p id="Total"></p>
+                        </div>
+                        <div>
+                            <h2>Checkout</h2>
+                            <form >
+                                <label for="Pay_methods">Pay methods:</label>
+                                <select id="payMethod__list" onchange="">
+                                    <option value="delivery">Payment on delivery</option>
+                                    <option value="online">Online payment </option>
+                            </select>   
+                            </form>
+                        </div>
+                        <div class="divbtn_buynow"><button class="btn_buynow" onclick="Check_login()">Buy Now</button></div>
+                    </div>
+    
+                </div>
+            </section>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script src="/assets/javascript/stoneCarving.js"></script>
+            <script src="/assets/javascript/cart.js"></script>
+    
+    
+</body>
+</html>
