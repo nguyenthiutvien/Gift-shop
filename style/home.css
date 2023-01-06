@@ -280,6 +280,7 @@ figure {
 		left: 125%;
 	}
 }
+/* feedback */
 .review {
     display: grid;
     grid-template-columns: 400px 400px 400px;
@@ -329,7 +330,6 @@ h2 {
     padding-left: 600px;
 
 }
-
 .subscirebe button {
     width: 300px;
 }
@@ -346,10 +346,10 @@ h2 {
     position: absolute;
 }
 .contact a{
-	/* color : rgb(28, 27, 27); */
+	color : rgb(28, 27, 27);
 	text-decoration: none;
 }
-.contact a:hover{
+.contact .infor a:hover{
 	color: white;
 }
 .company {
@@ -364,7 +364,7 @@ h2 {
 	text-decoration: none;
 	color : rgb(28, 27, 27);
 }
-.company ul li a:hover{
+.company ul li span a:hover{
 	color: #fff;
 }
 .company ul li {
@@ -377,9 +377,10 @@ h2 {
 }
 
 .btn-footer {
-    position: absolute;
+    position: relative;
     padding-top: 40px;
     padding-left: 900px;
+		top: 8px;
 }
 
 .infor {
@@ -387,7 +388,7 @@ h2 {
 }
 
 .aboutus p {
-    margin-top: 22px;
+    margin-top: 21px;
 }
 
 
@@ -417,10 +418,9 @@ h2 {
 }
 
 .form-control {
-	margin-top: 38px;
+	margin-top: 28px;
+	width: 250px;
 }
-
-
 .carousel-item > img{
 	height: 600px;
 	object-fit: cover;
@@ -430,4 +430,69 @@ h2 {
 	left: 10px;
 	width: 70px;
 	border: 2px solid var(--text-color);
+}
+/*  */
+.nav__account{
+	display: inline-flex;
+	align-items: center;
+	font-size: 17px;
+	width: 10%;
+	border:none;
+	background:none;
+	color: var(--text-navbar-before-hover);
+	transition: 0.3s ;
+}
+.nav__item a:hover{
+	color: var(--text-navbar-after-hover);
+	box-shadow: 0 3px var(--text-navbar-after-hover);
+	
+}
+.nav__login-icon{
+	font-size: 25px;
+}
+.nav__login{
+	padding: 10px 0px;
+	display: block;
+	width: 10%;
+	display: inline-flex;
+	align-items: center;
+	border:none;
+	background:none;
+	font-size: 20px;
+	color: var(--text-navbar-before-hover);
+	transition: 0.3s ;
+}
+.nav__login:hover,
+.nav__acount:hover{
+	color: var(--text-navbar-after-hover);
+	
+}
+
+
+.nav__account{
+	display:none;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	right: 100px;
+	top: 80px;
+	background-color: #ffffff;
+	min-width: 160px;
+	z-index: 1;
+}
+.dropdown-content a {
+	color: var(--text-navbar-before-hover);
+	padding: 15px 20px;
+	text-decoration: none;
+	display: block;
+	display: flex;
+	justify-content:space-around;
+}
+/* .dropdown-content a:hover {
+	border-bottom: 3px solid var(--text-navbar-after-hover);
+} */
+
+.account:hover .dropdown-content {
+	display: block;
 }
