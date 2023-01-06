@@ -163,12 +163,12 @@ function change_account_none() {
 }
 // login with admin
 
-const url_ADMIN="https://63a5720d318b23efa793a600.mockapi.io/api/admin";
+const url_admin="https://63a5720d318b23efa793a600.mockapi.io/api/admin";
 
 function sign_in_account_admin() {
   var email = document.getElementById("login_email_admin").value;
   var password = document.getElementById("login_password_admin").value;
-  axios.get(url_ADMIN).then((res) => {
+  axios.get(url_admin).then((res) => {
     var adminArr = res.data;
     for (var admin of adminArr) {
       if (email == admin.email && password == admin.password) {
