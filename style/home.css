@@ -163,3 +163,102 @@ figure {
 	height: 600px;
 	object-fit: cover;
 }
+
+/* footer */
+.bottom-footer {
+    background-color: #7FA7AD;
+    height: 300px;
+    padding-left: 60px;
+}
+
+.contact {
+    padding-top: 50px;
+    padding-left: 60px;
+    position: absolute;
+}
+.contact a{
+	color : rgb(28, 27, 27);
+	text-decoration: none;
+}
+.contact .infor a:hover{
+	color: white;
+}
+.company {
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 380px;
+}
+.company ul {
+	list-style: none;
+}
+.company ul li a{
+	text-decoration: none;
+	color : rgb(28, 27, 27);
+}
+.company ul li span a:hover{
+	color: #fff;
+}
+.company ul li {
+	margin-left: -38px;
+}
+.aboutus {
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 640px;
+}
+
+.btn-footer {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 900px;
+	top: 8px;
+}
+
+/* .infor {
+    margin-top: 22px;
+} */
+
+.aboutus p {
+    margin-top: 21px;
+}
+
+
+.btn {
+	color: white;
+	border-color: #ffff;
+}
+
+.btn1 {
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 300px;
+	border-radius: 5px;
+	text-align: center;
+	position: relative;
+	bottom: -30px;
+	border: none;
+	height: 40px;
+}
+
+.feadback {
+	padding-left: 150px;
+	background-color:var(--bg-window);
+}
+.customer{
+	color: var(--main-color);
+}
+
+.form-control {
+	margin-top: 28px;
+	width: 250px;
+}
+.carousel-item > img{
+	height: 600px;
+	object-fit: cover;
+}
+.underline{
+	position: relative;
+	left: 10px;
+	width: 70px;
+	border: 2px solid var(--text-color);
+}
