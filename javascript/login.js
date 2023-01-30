@@ -178,6 +178,19 @@ function sign_in_account_admin() {
   });
 
 }
+// Bat dang nhap khi mua hang
+function Check_login(){
+  if(window.localStorage.getItem(CUSID) == ""){
+    removeItemInArray(0);
+    closeViewCart();
+    // openNav__login();
+  }else{
+    closeViewCart();
+    openBill();
+    showBill();
+  }
+}
+
 
 function send(){
   var email = document.getElementById("emailuser").value;

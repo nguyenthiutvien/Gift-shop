@@ -1,4 +1,4 @@
-const Bill_api = "https://63a5720d318b23efa793a600.mockapi.io/api/bills";
+const Bill_api = "https://61c16f3d9dbcca0017c81ed3.mockapi.io/api/Bills";
 // ẩn hiện bill
 function openBill() {
   document.getElementById("bill").style.display = "block";
