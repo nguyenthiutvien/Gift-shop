@@ -1,4 +1,4 @@
-const Bill_api = "https://61c16f3d9dbcca0017c81ed3.mockapi.io/api/Bills";
+const Bill_api = "https://63a5720d318b23efa793a600.mockapi.io/api/bills";
 // ẩn hiện bill
 function openBill() {
   document.getElementById("bill").style.display = "block";
@@ -123,7 +123,7 @@ function convertDate(date) {
   return `${day < 10 ? "0" + day : day}/${month < 10 ? "0" + month : month}/${date.getFullYear()}`;
 }
 
-// xuất ra bill đã mua
+
 
 // getDatatoHistoryPage();
 function getDatatoHistoryPage() {
@@ -208,7 +208,7 @@ function OrderStatus(id){
         `
     })
     getProductArray(id);
-    ColorIcon(id);
+    colorIcon(id);
 }
 
 // lấy sản phẩm từ mảng trong đối tượng
@@ -235,7 +235,7 @@ function getProductArray(id){
     })
 }
 
-function ColorIcon(id){
+function colorIcon(id){
     getDataBill(id)
     .then((res) =>{
         var statusinAPI =res.data.status
