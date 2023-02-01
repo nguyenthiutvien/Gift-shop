@@ -1,7 +1,7 @@
 
 const url_customers='https://63a5720d318b23efa793a600.mockapi.io/api/customers'
 const CUSID = "cusid";
-function sign_in_account() {
+function signInAccount() {
   var email = document.getElementById("login_email").value;
   var password = document.getElementById("login_password").value;
   axios.get(url_customers).then((res) => {
@@ -98,7 +98,7 @@ function addAccount() {
   }
 }
 // ẩn thông báo lỗi mail
-function close_bug2_email() {
+function closeBugEmail2() {
   var parent = document.getElementById("signUp__email1");
   var child = document.getElementById("bug_mail");
   parent.removeChild(child);
@@ -145,7 +145,7 @@ function openNav__login() {
   document.getElementById("myNav__login").style.display = "block";
 }
 
-function closeNav__login() {
+function closeLogin() {
   // đóng cửa sổ login
   document.getElementById("myNav__login").style.display = "none";
 }
@@ -165,7 +165,7 @@ function change_account_none() {
 
 const url_admin="https://63a5720d318b23efa793a600.mockapi.io/api/admin";
 
-function sign_in_account_admin() {
+function signInAccountAdmin() {
   var email = document.getElementById("login_email_admin").value;
   var password = document.getElementById("login_password_admin").value;
   axios.get(url_admin).then((res) => {
@@ -179,7 +179,7 @@ function sign_in_account_admin() {
 
 }
 // Bat dang nhap khi mua hang
-function Check_login(){
+function checkLogin(){
   if(window.localStorage.getItem(CUSID) == ""){
     removeItemInArray(0);
     closeViewCart();

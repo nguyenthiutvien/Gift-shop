@@ -217,10 +217,10 @@ function buyNow(id){
       `
     };
     subtotalminiCart2();
-    checkpromo();
+    checkPromo();
   })
 }
-  function checkpromo(){
+  function checkPromo(){
     var promo_code = document.getElementById("promo_code").value;
     var subtotalFinal=0;
     var price_pro;

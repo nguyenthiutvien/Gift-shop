@@ -91,13 +91,13 @@ function check_form_formBill() {
     }
   }
 }
-function close_bug_nameCus() {
+function closeBugNameCus() {
   document.getElementById("bug6").style.display = "none";
 }
-function close_bug_phone_number_cus() {
+function closeBugPhoneNumberCus() {
   document.getElementById("bug7").style.display = "none";
 }
-function close_bug_address_cus() {
+function closeBugAddressCus() {
   document.getElementById("bug8").style.display = "none";
 }
 

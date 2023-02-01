@@ -1,11 +1,9 @@
-// dữ liệu của sản phẩm #####
+
 const url_products ="https://63a5720d318b23efa793a600.mockapi.io/api/products"
-// hàm show sản phẩm ra 
-//  hàm mở các section #########
-// home
+
 function open__section_home(){
     document.getElementById('home').style.display="block"
-    remove__view_product();
+    removeViewProduct();
     close__section_product()
 }
 function close__section_home(){
@@ -119,7 +117,7 @@ function viewProduct(id){
     close__section_home();
 }
 // xóa view product
-function remove__view_product(){
+function removeViewProduct(){
     document.getElementById('view_products').innerHTML="";
 }
 

@@ -19,7 +19,7 @@ function showStoneCarving(arr) {
                 <img src="${arr.data[i].image}" alt="">
             </div>
             <div class = "name_stoneCarving">
-                <button  class="quick_view" onclick="viewProducts_stoneCarving(${arr.data[i].id})" >Quick View</button>
+                <button  class="quick_view" onclick="viewProductsStoneCarving(${arr.data[i].id})" >Quick View</button>
             </div>
             <div>
                 <p>${arr.data[i].name}</p>
@@ -32,8 +32,8 @@ function showStoneCarving(arr) {
 }    
 getData3();
 
-// xem sản phẩm chi tiết
-function viewProducts_stoneCarving(id){
+// detail product
+function viewProductsStoneCarving(id){
     getData(id)
     .then((res) =>{
         var pro = res.data;
@@ -93,26 +93,26 @@ function viewProducts_stoneCarving(id){
         `
     });
     document.getElementById('view_products').innerHTML+=`
-    <button onclick="open__section_stoneCarving()" class="close1" id="close1_pr"><i class="ri-close-circle-line"></i></button>`;
-    open__view_page_stoneCarving();
+    <button onclick="openSectionStoneCarving()" class="close1" id="close1_pr"><i class="ri-close-circle-line"></i></button>`;
+    openViewPageStoneCarving();
 }
 // ẩn trang khi bấm vào sản phẩm
-function open__view_page_stoneCarving(){
+function openViewPageStoneCarving(){
     document.getElementById('stoneCarving').style.display="none";
     document.getElementById('view_products').style.display="block";
 }
 
 // tắt view sản phẩm
 
-function open__section_stoneCarving(){
+function openSectionStoneCarving(){
     document.getElementById('stoneCarving').style.display="block";
-    remove__view_product();
-    close__section_product()
+    // remove__view_product();
+    // close__section_product()
 }
 
-//  bộ lọc giá #########################################
 
-function show_filter_price5(){
+
+function showFilterPrice5(){
  
     document.getElementById("products__list-stoneCarving").innerHTML="";
     axios.get(url_products)
@@ -126,7 +126,7 @@ function show_filter_price5(){
                 <img src="${pro.image}" alt="">
             </div>
             <div class = "name_stoneCarving">
-                <button  class="quick_view" onclick="viewProducts_stoneCarving(${pro.id})" >Quick View</button>
+                <button  class="quick_view" onclick="viewProductsStoneCarving(${pro.id})" >Quick View</button>
             </div>
             <div>
                 <p>${pro.name}</p>
@@ -140,7 +140,7 @@ function show_filter_price5(){
 
 }
 
-function show_filter_price6(){
+function showFilterPrice6(){
   
     document.getElementById("products__list-stoneCarving").innerHTML="";
     axios.get(url_products)
@@ -154,7 +154,7 @@ function show_filter_price6(){
                 <img src="${pro.image}" alt="">
             </div>
             <div class = "name_stoneCarving">
-                <button  class="quick_view" onclick="viewProducts_stoneCarving(${pro.id})" >Quick View</button>
+                <button  class="quick_view" onclick="viewProductsStoneCarving(${pro.id})" >Quick View</button>
             </div>
             <div>
                 <p>${pro.name}</p>
@@ -167,7 +167,7 @@ function show_filter_price6(){
 })
 }
 
-function show_filter_price7(){
+function showFilterPrice7(){
 
     document.getElementById("products__list-stoneCarving").innerHTML="";
     axios.get(url_products)
@@ -181,7 +181,7 @@ function show_filter_price7(){
                 <img src="${pro.image}" alt="">
             </div>
             <div class = "name_stoneCarving">
-                <button  class="quick_view" onclick="viewProducts_stoneCarving(${pro.id})" >Quick View</button>
+                <button  class="quick_view" onclick="viewProductsStoneCarving(${pro.id})" >Quick View</button>
             </div>
             <div>
                 <p>${pro.name}</p>
@@ -193,7 +193,7 @@ function show_filter_price7(){
         }
 })
 }
-function show_filter_price8(){
+function showFilterPrice8(){
     
     document.getElementById("products__list-stoneCarving").innerHTML="";
     axios.get(url_products)
@@ -207,7 +207,7 @@ function show_filter_price8(){
                 <img src="${pro.image}" alt="">
             </div>
             <div class = "name_stoneCarving">
-                <button  class="quick_view" onclick="viewProducts_stoneCarving(${pro.id})" >Quick View</button>
+                <button  class="quick_view" onclick="viewProductsStoneCarving(${pro.id})" >Quick View</button>
             </div>
             <div>
                 <p>${pro.name}</p>
@@ -222,7 +222,7 @@ function show_filter_price8(){
 
 // bộ lọc màu ##################
 
-function show_filter_color2(color){
+function showFilterColor2(color){
 
     if(color.value == 'white'){
         document.getElementById("products__list-stoneCarving").innerHTML="";
@@ -237,7 +237,7 @@ function show_filter_color2(color){
                 <img src="${pro.image}" alt="">
             </div>
             <div class = "name_stoneCarving">
-                <button  class="quick_view" onclick="viewProducts_stoneCarving(${pro.id})" >Quick View</button>
+                <button  class="quick_view" onclick="viewProductsStoneCarving(${pro.id})" >Quick View</button>
             </div>
             <div>
                 <p>${pro.name}</p>
@@ -261,7 +261,7 @@ function show_filter_color2(color){
                 <img src="${pro.image}" alt="">
             </div>
             <div class = "name_stoneCarving">
-                <button  class="quick_view" onclick="viewProducts_stoneCarving(${pro.id})" >Quick View</button>
+                <button  class="quick_view" onclick="viewProductsStoneCarving(${pro.id})" >Quick View</button>
             </div>
             <div>
                 <p>${pro.name}</p>
@@ -285,7 +285,7 @@ function show_filter_color2(color){
                 <img src="${pro.image}" alt="">
             </div>
             <div class = "name_stoneCarving">
-                <button  class="quick_view" onclick="viewProducts_stoneCarving(${pro.id})" >Quick View</button>
+                <button  class="quick_view" onclick="viewProductsStoneCarving(${pro.id})" >Quick View</button>
             </div>
             <div>
                 <p>${pro.name}</p>
@@ -300,7 +300,7 @@ function show_filter_color2(color){
     
 }
 
-function clear__filter2(){
+function clearFilter2(){
     document.getElementById("products__list-stoneCarving").innerHTML="";
     axios.get(url_products)
         .then((res) => {
@@ -313,7 +313,7 @@ function clear__filter2(){
                 <img src="${pro.image}" alt="">
             </div>
             <div class = "name_stoneCarving">
-                <button  class="quick_view" onclick="viewProducts_stoneCarving(${pro.id})" >Quick View</button>
+                <button  class="quick_view" onclick="viewProductsStoneCarving(${pro.id})" >Quick View</button>
             </div>
             <div>
                 <p>${pro.name}</p>

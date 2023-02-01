@@ -9,12 +9,12 @@ function closeNav() {
 
 // ####### login ############
 
-function openNav__login() {
+function openLogin() {
   // mở của sổ login
   document.getElementById("myNav__login").style.display = "block";
 }
 
-function closeNav__login() {
+function closeLogin() {
   // đóng cửa sổ login
   document.getElementById("myNav__login").style.display = "none";
 }
@@ -96,7 +96,7 @@ function change_account_none() {
 }
 
 // Setting account (xem thông tin người dùng)
-function open_setting_account() {
+function openSettingAccount() {
   document.getElementById("setting_account").style.display = "block";
   axios.get(url_customers + "/" + localStorage.getItem(CUSID)).then((res) => {
     var cus = res.data;
@@ -108,7 +108,7 @@ function open_setting_account() {
 }
 
 // show thông tin người dùng để sửa
-function show_user_info_old() {
+function showInforUserOld() {
   document.getElementById("setting_account").style.display = "block";
   axios.get(url_customers + "/" + localStorage.getItem(CUSID)).then((res) => {
     var cus = res.data;
@@ -119,7 +119,7 @@ function show_user_info_old() {
   });
 }
 // cập nhập thông tin sau khi sửa
-function done_edit_info() {
+function doneEditInfo() {
   var email = document.getElementById("edit_email").value;
   var password = document.getElementById("edit_password").value;
   var phone = document.getElementById("edit_phone").value;
@@ -137,18 +137,18 @@ function done_edit_info() {
     });
 }
 
-function close_setting_account() {
+function closeSettingAccount() {
   document.getElementById("setting_account").style.display = "none";
 }
 
 
 // chuyển đổi giữa edit và done;
-function open_form_edit() {
+function openFormEdit() {
   document.getElementById("edit__account").style.display = "block";
   document.getElementById("your__account").style.display = "none";
 }
 
-function close_form_edit() {
+function closeFormEdit() {
   document.getElementById("edit__account").style.display = "none";
   document.getElementById("your__account").style.display = "block";
 }
@@ -159,7 +159,7 @@ const url_customers =
 
 //  đăng nhập
 const CUSID = "cusid";
-function sign_in_account() {
+function signInAccount() {
   var email = document.getElementById("login_email").value;
   var password = document.getElementById("login_password").value;
   axios.get(url_customers).then((res) => {
@@ -256,7 +256,7 @@ function addAccount() {
   }
 }
 // ẩn thông báo lỗi mail
-function close_bug2_email() {
+function closeBugEmail2() {
   var parent = document.getElementById("signUp__email1");
   var child = document.getElementById("bug_mail");
   parent.removeChild(child);
@@ -284,21 +284,21 @@ function check_form_sign_up() {
   }
 }
 // ẩn bug
-function close_bug_email() {
+function closeBugEmail() {
   document.getElementById("bug1").style.display = "none";
 }
-function close_bug_password() {
+function closeBugPassword() {
   document.getElementById("bug2").style.display = "none";
 }
-function close_bug_phone_number() {
+function closeBugPhoneNumber() {
   document.getElementById("bug3").style.display = "none";
 }
-function close_bug_address() {
+function closeBugAddress() {
   document.getElementById("bug4").style.display = "none";
 }
 // Đăng xuất
 
-function sign_out_account() {
+function signOutAccount() {
   window.localStorage.setItem(CUSID, "");
   setAccount();
   location.reload();
@@ -318,8 +318,7 @@ const setAccount = () => {
   });
 };
 
-//  admin @@@@@@@
-// const url_admin = "https://63a5720d318b23efa793a600.mockapi.io/api/admin";
+
 
 // chuyển đổi giữa các trang
 function openHomePage() {
@@ -328,7 +327,7 @@ function openHomePage() {
   document.getElementById("stoneCarving").style.display = "none";
   document.getElementById("about").style.display = "none";
   document.getElementById("contact").style.display = "none";
-  remove__view_product();
+  removeViewProduct();
   closeViewCart();
   removeItemViewCart();
   closeBill()
@@ -339,18 +338,18 @@ function openHandmadePage() {
   document.getElementById("stoneCarving").style.display = "none";
   document.getElementById("about").style.display = "none";
   document.getElementById("contact").style.display = "none";
-  remove__view_product();
+  removeViewProduct();
   closeViewCart();
   removeItemViewCart();
   closeBill()
 }
-function openstoneCarvingPage() {
+function openStoneCarvingPage() {
   document.getElementById("home").style.display = "none";
   document.getElementById("handmade").style.display = "none";
   document.getElementById("stoneCarving").style.display = "block";
   document.getElementById("about").style.display = "none";
   document.getElementById("contact").style.display = "none";
-  remove__view_product();
+  removeViewProduct();
   closeViewCart();
   removeItemViewCart();
   closeBill()
@@ -361,7 +360,7 @@ function openAboutPage() {
   document.getElementById("stoneCarving").style.display = "none";
   document.getElementById("about").style.display = "block";
   document.getElementById("contact").style.display = "none";
-  remove__view_product();
+  removeViewProduct();
   closeViewCart();removeItemViewCart();
   closeBill()
 }
@@ -371,7 +370,7 @@ function openContactPage() {
   document.getElementById("stoneCarving").style.display = "none";
   document.getElementById("about").style.display = "none";
   document.getElementById("contact").style.display = "block";
-  remove__view_product();
+  removeViewProduct();
   closeViewCart();
   removeItemViewCart();
   closeBill()
@@ -384,7 +383,7 @@ function Check_login(){
   if(window.localStorage.getItem(CUSID) == ""){
     removeItemInArray(0);
     closeViewCart();
-    openNav__login();
+    openLogin();
   }else{
     closeViewCart();
     openBill();
@@ -396,16 +395,17 @@ function Check_login(){
 
 const url_admin="https://63a5720d318b23efa793a600.mockapi.io/api/admin";
 
-function sign_in_account_admin() {
+function signInAccountAdmin() {
   var email = document.getElementById("login_email_admin").value;
   var password = document.getElementById("login_password_admin").value;
   axios.get(url_admin).then((res) => {
     var adminArr = res.data;
     for (var admin of adminArr) {
       if (email == admin.email && password == admin.password) {
-        window.location.href="http://172.29.128.1:5500/PROJECT/admin.html"
+        window.location.href="/admin.html"
     }
   }
+  
   });
 
 }
@@ -417,7 +417,7 @@ function send(){
 
 // gửi Email
 function sendEmail(email) {
-	return Email.send({
+	return email.send({
 	Host: "smtp.gmail.com",
 	Username : "ntuv003@gmail.com",
 	Password : "foykcgfdzgolgsua",

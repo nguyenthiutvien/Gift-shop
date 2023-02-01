@@ -105,7 +105,7 @@ function open__view_page_handmade(){
 // tắt view sản phẩm
 function open__section_handmade(){
     document.getElementById('handmade').style.display="block";
-    remove__view_product();
+    removeViewProduct();
     close__section_product()
 }
 //  filter lọc sản phẩm theo mong muốn #######################
@@ -222,7 +222,7 @@ function show_filter_price4(){
 
 // bộ lọc màu ##################
 
-function show_filter_color1(color){
+function showFilterColor1(color){
 
     if(color.value == 'white'){
         document.getElementById("products__list-handmade").innerHTML="";
@@ -300,7 +300,7 @@ function show_filter_color1(color){
     
 }
 
-function clear__filter(){
+function clearFilter(){
    
     document.getElementById("products__list-handmade").innerHTML="";
     axios.get(url_products)

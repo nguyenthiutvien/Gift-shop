@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- #### favicon ###### -->
-    <!-- <link rel="shortcut icon" href="img/logo.jpg"type="image/x-icon"> -->
-    <!-- #### css #### -->
     <link rel="stylesheet" href="./style/home.css">
-	<!-- <link rel="stylesheet" href="./style/reset.css"> -->
 	<link rel="stylesheet" href="./style/variable.css">
-    <!-- #### remix ### -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-
-    <!-- ######## Email ############## -->
-    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"> 
     <title>Souvenirs</title>
     
 </head>
-
 <body>
     <!-- ##### header ######## -->
     <header class="header" id="header">
@@ -33,7 +24,7 @@
                         <a onclick="openHandmadePage()" class="nav__link">Handmade</a>
                     </li>
                     <li class="nav__item">
-                        <a onclick="openstoneCarvingPage()" class="nav__link">Stone Carving</a>
+                        <a onclick="openStoneCarvingPage()" class="nav__link">Stone Carving</a>
                     </li>
                     <li class="nav__item">
                         <a onclick="openAboutPage()" class="nav__link">About</a>
@@ -43,13 +34,13 @@
                     </li>
                 </ul>
             </div>
-            <button onclick="openNav__login()" class="nav__login" id="nav__login"><i class="ri-account-circle-fill nav__login-icon"></i>Login</button>
+            <button onclick="openLogin()" class="nav__login" id="nav__login"><i class="ri-account-circle-fill nav__login-icon"></i>Login</button>
             <div class="account" id="account">
                 <button  class="nav__account" id="nav__account" ></button>
                 <div class="dropdown-content">
-                    <a onclick="open_setting_account()"><span>Setting</span><span><i class="ri-settings-4-fill"></i></span></a>
+                    <a onclick="openSettingAccount()"><span>Setting</span><span><i class="ri-settings-4-fill"></i></span></a>
                     <a onclick="openHistory()"><span>History</span><span><i class="ri-timer-2-fill"></i></span></a>
-                    <a onclick="sign_out_account()"><span>Sign out</span><span><i class="ri-logout-circle-r-fill"></i></span></a>
+                    <a onclick="signOutAccount()"><span>Sign out</span><span><i class="ri-logout-circle-r-fill"></i></span></a>
                 </div>
             </div>
             <a href="#" onclick="openCart()" class="nav__cart"><i class="ri-shopping-cart-2-fill nav__cart-icon"></i><p id="countpro1">0</p></a>
@@ -62,24 +53,23 @@
         <section class="home" id="home">
             <div class="home__container">
                 <div class="slideshow-container">
-
                     <div class="mySlides fade">
-                      <img src="./assets/img/hopqua2.jpg" >
+                      <img src="./assets/img/slide1.jpg" >
+                    </div>
+    
+                    <div class="mySlides fade">
+                      <img src="./assets/img/slide2.jpg" >
                     </div>
                     
                     <div class="mySlides fade">
-                      <img src="./assets/img/hopqua.jpg" >
+                      <img src="./assets/img/slide3.jpg" >
                     </div>
-                    
-                    <div class="mySlides fade">
-                      <img src="./assets/img/hopqua1.jpg" >
-                    </div>
-                    
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
                 
             </div><br><br>
+
             <p class="title">OUR PRODUCTS</p>
             <div class="home__products" id="home__products">
                 <div class="home__products_handmade" id="home__products_handmade">
@@ -115,7 +105,7 @@
             <div class="review">
                 <div class="review_customer"><img src="./assets/img/tien.jpg" alt="" ><br><br> <b> A Tiến</b><br>
                 <p>The product very nice and cheap. <br> I am very satisfied with the product </p></div>
-                <div class="review_customer"><img src="./assets/img/utzien.jpg" alt="" > <br><br> <b>Út Viên</b>  <br>
+                <div class="review_customer"><img src="./assets/img/vien.jpg" alt="" > <br><br> <b>Út Viên</b>  <br>
                 <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
                 <div class="review_customer"><img src="./assets/img/hthang.jpg" alt="" > <br><br> <b>Hữu Thắng</b>  <br>
                 <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
@@ -134,13 +124,13 @@
                         <div>
                             <form>
                                 <p>Price</p>
-                                <input type="radio" id="age1" name="age" value="30" onclick="show_filter_price1()" >
+                                <input type="radio" id="age1" name="age" value="30" onclick="showFilterPrice1()" >
                                 <label for="age1">0.00$ - 30.00$</label><br>
-                                <input type="radio" id="age2" name="age" value="100" onclick="show_filter_price2()">
+                                <input type="radio" id="age2" name="age" value="100" onclick="showFilterPrice2()">
                                 <label for="age2">30.00$ - 100.00$</label><br>  
-                                <input type="radio" id="age3" name="age" value="150" onclick="show_filter_price3()">
+                                <input type="radio" id="age3" name="age" value="150" onclick="showFilterPrice3()">
                                 <label for="age3">100.00$ - 150.00$</label><br>
-                                <input type="radio" id="age3" name="age" value="200" onclick="show_filter_price4()">
+                                <input type="radio" id="age3" name="age" value="200" onclick="showFilterPrice4()">
                                 <label for="age3">150.00$ - 200.00$</label><br><br>
                             
                             </form>
@@ -149,7 +139,7 @@
                         <div>
                             <form >
                                 <label for="color" >Color:</label>
-                                <select id="color__list" onchange="show_filter_color1(this)">
+                                <select id="color__list" onchange="showFilterColor1(this)">
                                     <option value="white"  >White</option>
                                     <option value="blue"  >Blue</option>
                                     <option value="grey" >Grey</option>
@@ -160,7 +150,7 @@
                         </div>
                         <br>
                         <br>
-                        <div class="clearFilter"onclick ="clear__filter()">Clear Filter</div>           
+                        <div class="clearFilter"onclick ="clearFilter()">Clear Filter</div>           
                     </div>
                     <div class="products__list products__list-handmade" id="products__list-handmade">
 
@@ -181,13 +171,13 @@
                         <div>
                             <form>
                                 <p>Price</p>
-                                <input type="radio" id="age1" name="age" value="30"  onclick="show_filter_price5()">
+                                <input type="radio" id="age1" name="age" value="30"  onclick="showFilterPrice5()">
                                 <label for="age1">0.00$ - 30.00$</label><br>
-                                <input type="radio" id="age2" name="age" value="100" onclick="show_filter_price6()">
+                                <input type="radio" id="age2" name="age" value="100" onclick="showFilterPrice6()">
                                 <label for="age2">30.00$ - 100.00$</label><br>  
-                                <input type="radio" id="age3" name="age" value="150" onclick="show_filter_price7()">
+                                <input type="radio" id="age3" name="age" value="150" onclick="showFilterPrice7()">
                                 <label for="age3">100.00$ - 150.00$</label><br>
-                                <input type="radio" id="age3" name="age" value="200" onclick="show_filter_price8()">
+                                <input type="radio" id="age3" name="age" value="200" onclick="showFilterPrice8()">
                                 <label for="age3">150.00$ - 200.00$</label><br><br>
                             </form>
                             
@@ -196,7 +186,7 @@
                         <div>
                             <form >
                                 <label for="color">Color:</label>
-                                <select id="color__list" onchange="show_filter_color2(this)">
+                                <select id="color__list" onchange="showFilterColor2(this)">
                                     <option value="white">White</option>
                                     <option value="blue">Blue</option>
                                     <option value="grey">Grey</option>
@@ -207,7 +197,7 @@
                         </div>
                         <br>
                         <br>
-                        <div class="clearFilter" onclick="clear__filter2()">Clear Filter</div>           
+                        <div class="clearFilter" onclick="clearFilter2()">Clear Filter</div>           
                     </div>
                     <div class="products__list products__list-stoneCarving" id="products__list-stoneCarving">
 
@@ -233,7 +223,7 @@
                     </div>
     
                     <div class="iamge_about" id="iamge_about">
-                        <img src="https://4kwallpapers.com/images/walls/thumbs_3t/7059.jpg" alt="">
+                        <img src="./assets/img/contact.jpg" alt="">
                     </div>
                 </div>
     
@@ -325,7 +315,7 @@
                             </div>
                             <div id="text_promo_code">
                                 <input type="text" id="promo_code">
-                                <input type="button" onclick="offer();checkpromo()" value="Apply">
+                                <input type="button" onclick="offer();checkPromo()" value="Apply">
                             </div>
                         </div>
                         <div class="note_cart">
@@ -369,7 +359,7 @@
                         </select>   
                         </form>
                     </div>
-                    <div class="divbtn_buynow"><button class="btn_buynow" onclick="Check_login()">Buy Now</button></div>
+                    <div class="divbtn_buynow"><button class="btn_buynow" onclick="checkLogin()">Buy Now</button></div>
                 </div>
 
             </div>
@@ -378,22 +368,22 @@
         <section class="bill" id="bill">
             <div class="content_bill" id="content_bill">
                 <div class="img_top" id="img_top">
-                    <img src="./asset/img/hopqua.jpg" alt="">
+                    <img src="./asset/img/slide2.jpg" alt="">
                 </div>
                 <div class="content_bottom" id="content_bottom">
                     <div class="form_info" id="form_info">
                         <p>Contact Info</p>
                         <div class="name_cus">
                             <p>Name <p class ="bug" id="bug6">*</p></p>
-                            <input type="text" id="name_cus" onclick="close_bug_nameCus()"></input>
+                            <input type="text" id="name_cus" onclick="closeBugNameCus()"></input>
                         </div>
                         <div class="phone_number">
                             <p>Phone Number <p class="bug" id="bug7">*</p> </p>
-                            <input type="text" id="phone_number_cus" onclick="close_bug_phone_number_cus()"></input>
+                            <input type="text" id="phone_number_cus" onclick="closeBugPhoneNumberCus()"></input>
                         </div>
                         <div class="address">
                             <p>Address <p class="bug" id="bug8">*</p></p>
-                            <input type="text" id="address_cus" onclick="close_bug_address_cus()"></input>
+                            <input type="text" id="address_cus" onclick="closeBugAddressCus()"></input>
                         </div>
                     </div>
                     <div class="content_order" id="content_order">
@@ -454,7 +444,9 @@
 
         </div>
     </footer>
-    <!-- Cửa sổ -->
+
+
+   
             <!-- ######### mobile ########## -->
             <div id="myNav" class="overlay">
                 <div class="nav__menu-mobile" id="nav__menu">
@@ -467,7 +459,7 @@
                             <a onclick="openHandmadePage();closeNav()" class="nav__link">Handmade</a>
                         </li>
                         <li class="nav__item-mobile">
-                            <a onclick="openstoneCarvingPage();closeNav()" class="nav__link">Stone Carving</a>
+                            <a onclick="openStoneCarvingPage();closeNav()" class="nav__link">Stone Carving</a>
                         </li>
                         <li class="nav__item-mobile">
                             <a onclick="openAboutPage();closeNav()" class="nav__link">About</a>
@@ -479,19 +471,21 @@
                 </div>
                 <a href="#" onclick="openCart()" class="nav__cart-mobile"><i class="ri-shopping-cart-2-fill nav__cart-icon"></i><p id="countpro2">0</p></a>
                 <br>
-                <button onclick="openNav__login()" class="nav__login" id="nav__login_mobile"><div ><i class="ri-user-fill nav__login-icon"></i>Login</div></button>
+                <button onclick="openLogin()" class="nav__login" id="nav__login_mobile"><div ><i class="ri-user-fill nav__login-icon"></i>Login</div></button>
                 <div class="account__mobile" id="account__mobile">
                     <button  class="nav__account" id="nav__account_moblile"></button>
                     <div class="dropdown-content dropdown-content_mobile">
-                    <a onclick="open_setting_account()"><span>Setting</span><span><i class="ri-settings-4-fill"></i></span></a>
+                    <a onclick="openSettingAccount()"><span>Setting</span><span><i class="ri-settings-4-fill"></i></span></a>
                     <a onclick="openHistory()"><span>History</span><span><i class="ri-timer-2-fill"></i></span></a>
-                    <a onclick="sign_out_account()"><span>Sign out</span><span><i class="ri-logout-circle-r-fill"></i></span></a>
+                    <a onclick="signOutAccount()"><span>Sign out</span><span><i class="ri-logout-circle-r-fill"></i></span></a>
                     </div>
                 </div>
             </div>
+
+            
             <!-- ######## Login ########## -->
             <div id="myNav__login" class="overlay__login">
-                <button onclick="closeNav__login();openHomePage()" class="close1"><i class="ri-close-circle-line"></i></button>
+                <button onclick="closeLogin();openHomePage()" class="close1"><i class="ri-close-circle-line"></i></button>
                 <div class="login__page">
                     <div class="item__img">
                         <div class="logins user ">
@@ -508,7 +502,7 @@
                                         <input type="password" id="login_password" placeholder=".......">
                                         <p>No account <a onclick="next__page(1)">Create one?</a></p>
                                         <p>Sign in with <a onclick="next__page(-1)">Admin?</a></p>
-                                        <button type="button" onclick="sign_in_account()" class="btn_signin">Sign In</button>
+                                        <button type="button" onclick="signInAccount()" class="btn_signin">Sign In</button>
                                     </form>
                                 </div>
                             </div>
@@ -522,19 +516,20 @@
                                     <form class="form__signup">
                                         <h1>SIGN UP</h1>
                                         <label class="signUp__email" id="signUp__email1">Email <p class="bug" id="bug1">*</p></label>
-                                        <input type="text" id="signUp__email" placeholder="test@gmail.com" onclick="close_bug_email();close_bug2_email()">
+                                        <input type="text" id="signUp__email" placeholder="test@gmail.com" onclick="closeBugEmail();closeBugEmail2()">
                                         <label class="signUp_password" id="signUp_password1" >Password <p class="bug" id="bug2">*</p></label>
-                                        <input type="password" id="signUp_password" placeholder="......." onclick="close_bug_password()">
+                                        <input type="password" id="signUp_password" placeholder="......." onclick="closeBugPassword()">
                                         <label class="signUp_phone"id="signUp_phone1" >Phone Number <p class="bug" id="bug3">*</p></label>
-                                        <input type="text" id="signUp_phone" placeholder="Enter here" onclick="close_bug_phone_number()">
+                                        <input type="text" id="signUp_phone" placeholder="Enter here" onclick="closeBugPhoneNumber()">
                                         <label class="signUp_Address" id="signUp_Address1" >Address <p class="bug" id="bug4">*</p></label>
-                                        <input type="text" id="signUp_Address" placeholder="Enter here" onclick="close_bug_address()">
+                                        <input type="text" id="signUp_Address" placeholder="Enter here" onclick="closeBugAddress()">
                                         <button  type="button"class="btn_signup" onclick="addAccount()"> SIGN UP</button>
                                         <button  type="button" onclick="next__page(-1)" class="btn_signup">SIGN IN</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
+                        
                         <!-- admin -->
                         <div class="logins admin">
                             <div class="login_page">
@@ -549,7 +544,7 @@
                                         <label class="login_password" >Password</label>
                                         <input type="password" id="login_password_admin" placeholder=".......">
                                         <p>Sign in with <a onclick="next__page(1)">User?</a></p>
-                                        <button type="button" onclick="sign_in_account_admin()" class="btn_signin">SIGN IN</button>
+                                        <button type="button" onclick="signInAccountAdmin()" class="btn_signin">SIGN IN</button>
                                     </form>
                                 </div>
                             </div>
@@ -576,12 +571,12 @@
                         <div class="cart-sub-title">Subtotal</div>
                         <div class="cart-sub-total" id="cart-sub-total"></div>
                     </div>
-                    <button id="viewCart" onclick="remove__view_product();removeItemViewCart();viewCart();openViewCart()">View Cart</button>
+                    <button id="viewCart" onclick="removeViewProduct();removeItemViewCart();viewCart();openViewCart()">View Cart</button>
                 </div>
             </div>
             <!-- ######### Setting Account ###### -->
             <div id="setting_account" class="setting_account">
-                <button onclick="close_setting_account()" class="close1"><i class="ri-close-circle-line"></i></button>
+                <button onclick="closeSettingAccount()" class="close1"><i class="ri-close-circle-line"></i></button>
                 <div class="your__account" id="your__account">
                     <h1>Your Account</h1>
                     <h4>Email Address</h4>
@@ -596,7 +591,7 @@
                     <h4>Address</h4>
                     <p id="setting_address"></p>
                     <hr>
-                    <button  class="btn__edit" onclick="open_form_edit();show_user_info_old();">Edit</button>
+                    <button  class="btn__edit" onclick="openFormEdit();showInforUserOld();">Edit</button>
                 </div>
                 <div class="edit__account" id="edit__account">
                     <h1>Edit Account</h1>
@@ -608,8 +603,8 @@
                     <input type="text" id="edit_phone">
                     <h4>Address</h4>
                     <input type="text" id="edit_address">
-                    <button class="btn__done" onclick="done_edit_info()">Done</button>
-                    <button class="btn__back" onclick="close_form_edit()">Back</button>
+                    <button class="btn__done" onclick="doneEditInfo()">Done</button>
+                    <button class="btn__back" onclick="closeFormEdit()">Back</button>
                 </div>
             </div>
 
