@@ -501,6 +501,19 @@ h2 {
 #submit_contact:hover{
     background: var(--text-navbar-before-hover)
 }
+.input-container {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+.icon {
+    padding: 5.4px;
+    background:var(--main-color);
+    color: white;
+    min-width: 30px;
+    text-align: center;
+  }
 
 /*################# view products ######## */
 #close1_pr{
