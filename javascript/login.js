@@ -34,10 +34,14 @@ function signInAccount() {
 }
 // Thông báo đăng nhập thành công
 function sign_in_successful() {
-  var content =
-    "<h1>Hi! Welcome to Sourvier Da Nang </h1>" +
-    "<br><p>Change the look of your house, change the perspective of others</p>";
-  document.getElementById("item__login").innerHTML = content;
+  // var content =
+    // "<h1>Hi! Welcome to Sourvier Da Nang </h1>" +
+    // "<br><p>Change the look of your house, change the perspective of others</p>";
+    alert('Sign in successful');
+    window.location.href='/index.html';
+
+  // document.getElementById("item__login").innerHTML = content;
+  
 }
 // thông báo khi đăng nhập sai!
 function sign_in_failed() {
@@ -172,7 +176,9 @@ function signInAccountAdmin() {
     var adminArr = res.data;
     for (var admin of adminArr) {
       if (email == admin.email && password == admin.password) {
-        window.location.href="/pages/admin.html"
+        window.location.href="./http://127.0.0.1:5502/admin.html"
+        
+        
     }
   }
   });
@@ -183,7 +189,7 @@ function checkLogin(){
   if(window.localStorage.getItem(CUSID) == ""){
     removeItemInArray(0);
     closeViewCart();
-    // openNav__login();
+    openNav__login();
   }else{
     closeViewCart();
     openBill();
@@ -199,19 +205,19 @@ function send(){
 
 // gửi Email
 function sendEmail(email) {
-	return Email.send({
+	return email.send({
 	Host: "smtp.gmail.com",
 	Username : "viennguyen.com",
 	Password : "123456789",
 	To : `${email}`,
 	From : "ntuv003@gmail.com",
-	Subject : "Promo code form INDOOR",
+	Subject : "Promo code form Gift Shop",
 	Body : "Promo code: ABCD",
 	});
 }
 function change_login_none() {
   // none sau khi đăng nhập
   document.getElementById("nav__login").style.display = "none";
-  // document.getElementById("nav__login_mobile").style.display = "none";
+  document.getElementById("nav__login_mobile").style.display = "none";
 
  }

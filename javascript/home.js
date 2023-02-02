@@ -402,7 +402,7 @@ function signInAccountAdmin() {
     var adminArr = res.data;
     for (var admin of adminArr) {
       if (email == admin.email && password == admin.password) {
-        window.location.href="/admin.html"
+        window.location.href="http://127.0.0.1:5502/admin.html"
     }
   }
   

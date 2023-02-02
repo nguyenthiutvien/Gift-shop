@@ -20,11 +20,10 @@ function showStoneCarving(arr) {
             </div>
             <div class = "name_stoneCarving">
                 <button  class="quick_view" onclick="viewProductsStoneCarving(${arr.data[i].id})" >Quick View</button>
+                <div class  = "name_pro">${arr.data[i].name}</div>
+                <div class = "price">$${arr.data[i].price}</div>
             </div>
-            <div>
-                <p>${arr.data[i].name}</p>
-                <p>$${arr.data[i].price}</p>
-            </div>
+            
         </div>
         `
         }
@@ -44,7 +43,7 @@ function viewProductsStoneCarving(id){
             <img src="${pro.image}" alt="">
         </div>
         <div class="infor_pro"id="infor_pro${pro.id}">
-            <p>${pro.infor}</p>
+            <p>${pro.info}</p>
         </div>
     </div>
     <div class="view_infor">

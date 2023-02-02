@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/home.css">
 	<link rel="stylesheet" href="./style/variable.css">
+    <script src="https://kit.fontawesome.com/11a9c95312.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"> 
     <title>Souvenirs</title>
     
@@ -109,6 +110,8 @@
                 <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
                 <div class="review_customer"><img src="./assets/img/hthang.jpg" alt="" > <br><br> <b>Hữu Thắng</b>  <br>
                 <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
+                <div class="review_customer"><img src="./assets/img/hthang.jpg" alt="" > <br><br> <b>Thanh Thúy</b>  <br>
+                <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
             </div>
         </div>
         </section>
@@ -150,7 +153,8 @@
                         </div>
                         <br>
                         <br>
-                        <div class="clearFilter"onclick ="clearFilter()">Clear Filter</div>           
+
+                        <button class="clearFilter"onclick ="clearFilter()">Clear Filter</button>           
                     </div>
                     <div class="products__list products__list-handmade" id="products__list-handmade">
 
@@ -197,7 +201,7 @@
                         </div>
                         <br>
                         <br>
-                        <div class="clearFilter" onclick="clearFilter2()">Clear Filter</div>           
+                        <button class="clearFilter" onclick="clearFilter2()">Clear Filter</button>           
                     </div>
                     <div class="products__list products__list-stoneCarving" id="products__list-stoneCarving">
 
@@ -222,7 +226,7 @@
                      </div>
                     </div>
     
-                    <div class="iamge_about" id="iamge_about">
+                    <div class="image_about" id="image_about">
                         <img src="./assets/img/contact.jpg" alt="">
                     </div>
                 </div>
@@ -262,7 +266,7 @@
                 <div class="text_left" id="text_left">
                 <h2>Contact</h2>
                 <div>
-                <br><br>
+                
                 <p>1-800-000-0000<br>
                 info@mysite.com</p><br>
                 <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
@@ -281,7 +285,7 @@
                 <input type="text" id="Subject" placeholder="Subject">    
                 </div><br>
                 <div>  
-                <textarea rows="5"  id="message" placeholder="message" ></textarea>
+                <textarea  id="message" placeholder="Message" ></textarea>
                 </div><br>
                  <button type="button" id ="submit_contact">Submit</button> 
                 </form>
@@ -409,30 +413,36 @@
         <div class="content__footer" >
             <div class="footer__info">
                 <div class="footer__infor-text">
-                    <p>Contact Us</p>
-                    <p>1-800-200-0000</p>
-                    <p>huuthang@gmail.com</p>
+                    <h4>CONTACT US</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Son Tra, Da Nang </p>
+                    <p> <i class="fa-solid fa-phone"></i> (+84) 0394827822 </p>
+                    <p><i class="fa-solid fa-envelope"></i> huuthang@gmail.com</p>
                 </div>
                 <div class="footer__media">
-                    <i class="ri-facebook-fill footer__media-icon"></i>
-                    <i class="ri-instagram-fill footer__media-icon"></i>
-                    <i class="ri-pinterest-fill footer__media-icon"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
                 </div>
             </div>
             <div class="footer__bank">
                 <div class="footer__bank-text">
-                    <p>We Accept</p>
+                    <h4>COMPANY</h4>
                 </div>
-                <div class="footer__bank-icon">
-                <img src="https://static.wixstatic.com/media/cda177_66112d8828944365b8a0fb3f95e423a0.png/v1/fill/w_32,h_20,al_c,q_85,usm_0.66_1.00_0.01/cda177_66112d8828944365b8a0fb3f95e423a0.webp" >
-                <img src="https://static.wixstatic.com/media/cda177_0292d75330eb4c46819ebd76e2b71edd.png/v1/fill/w_34,h_22,al_c,q_85,usm_0.66_1.00_0.01/cda177_0292d75330eb4c46819ebd76e2b71edd.webp" alt="">
-                <img src="https://static.wixstatic.com/media/cda177_ae6aa613f4e049c697544cc8c8375ea2.png/v1/fill/w_33,h_21,al_c,q_85,usm_0.66_1.00_0.01/cda177_ae6aa613f4e049c697544cc8c8375ea2.webp" alt="">
-                <img src="https://static.wixstatic.com/media/cda177_91a1dcd4c6d44674acf4a562b09838f6.png/v1/fill/w_35,h_22,al_c,q_85,usm_0.66_1.00_0.01/cda177_91a1dcd4c6d44674acf4a562b09838f6.webp" alt="">
+                <div class="footer__company">
+                    <ul>
+                        <li>HOME</li>
+                        <li>HANDMADE</li>
+                        <li>STONE CARVING</li>
+                        <li>ABOUT</li>
+                        <li>CONTACT</li>
+                    </ul>
                 </div>
+                
             </div>
             <div class="footer__Email">
                 <div class="footer__Email-text">
-                    Get promo code now
+                   <h4>Get promo code now</h4> 
                 </div>
                 <div class="footer__Email-font">
                     <input type="text" placeholder="Enter your email here" id="emailuser">

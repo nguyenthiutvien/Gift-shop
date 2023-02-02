@@ -1,6 +1,5 @@
 const APIconfirm = 'https://63a5720d318b23efa793a600.mockapi.io/api/products';
 
-const API = 'https://63a5720d318b23efa793a600.mockapi.io/api/customers';
 
 function getData() {
     axios.get(`${APIconfirm}`)
@@ -18,7 +17,9 @@ function getData() {
 }
 var dem = 0;
 
+
 function show(arr) {
+    
     for (let i = 0; i < arr.data.length; i++) {
         dem++;
         document.getElementById('tbl').innerHTML += `
@@ -161,6 +162,7 @@ function showorders() {
     document.getElementById("container_order").style.display = "block";
 }
 
+const API = 'https://63a5720d318b23efa793a600.mockapi.io/api/customers';
 
 // customer
 function showcustomer_pro(ress) {
@@ -345,7 +347,7 @@ function changeColor3(){
 // show danh sách bill
 function convertDate(date) {
     var day = date.getDate();
-    var month = date.getMonth() + 1;
+    var month = date.getMonth() ;
     return `${day < 10 ? "0" + day : day}/${month < 10 ? "0" + month : month}/${date.getFullYear()}`;
   }
 

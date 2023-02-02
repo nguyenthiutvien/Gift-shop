@@ -44,7 +44,7 @@ function viewProducts_handmade(id){
             <img src="${pro.image}" alt="">
         </div>
         <div class="infor_pro"id="infor_pro${pro.id}">
-            <p>${pro.infor}</p>
+            <p>${pro.info}</p>
         </div>
     </div>
     <div class="view_infor">
@@ -108,11 +108,11 @@ function open__section_handmade(){
     removeViewProduct();
     close__section_product()
 }
-//  filter lọc sản phẩm theo mong muốn #######################
+
 
 //  bộ lọc giá #########################################
 
-function show_filter_price1(){
+function showFilterPrice1(){
 
     document.getElementById("products__list-handmade").innerHTML="";
     axios.get(url_products)
@@ -140,7 +140,7 @@ function show_filter_price1(){
 
 }
 
-function show_filter_price2(){
+function showFilterPrice2(){
   
     document.getElementById("products__list-handmade").innerHTML="";
     axios.get(url_products)
@@ -167,7 +167,7 @@ function show_filter_price2(){
 })
 }
 
-function show_filter_price3(){
+function showFilterPrice3(){
  
     document.getElementById("products__list-handmade").innerHTML="";
     axios.get(url_products)
@@ -193,7 +193,7 @@ function show_filter_price3(){
         }
 })
 }
-function show_filter_price4(){
+function showFilterPrice4(){
    
     document.getElementById("products__list-handmade").innerHTML="";
     axios.get(url_products)

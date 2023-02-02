@@ -29,6 +29,7 @@
     margin: 0;
     padding: 0px;
     transition: all 0.3s;
+    
 }
 body{
     max-width: 100%;
@@ -69,6 +70,7 @@ body{
     display: inline-flex;
     align-items: center;
     width: 20%;
+    cursor: pointer;
 }
 
 .nav__menu{
@@ -88,6 +90,7 @@ body{
 .nav__item a{
     color: var(--text-navbar-before-hover);
     transform:1s;
+    cursor: pointer;
     /* box-shadow: none; */
 }
 .nav__account{
@@ -99,6 +102,8 @@ body{
     background:none;
     color: var(--text-navbar-before-hover);
     transition: 0.3s ;
+   
+    
 }
 .nav__item a:hover{
     color: var(--text-navbar-after-hover);
@@ -119,6 +124,7 @@ body{
     font-size: 20px;
     color: var(--text-navbar-before-hover);
     transition: 0.3s ;
+    cursor: pointer;
 }
 .nav__login:hover,
 .nav__acount:hover{
@@ -145,6 +151,7 @@ body{
     display: block;
     display: flex;
     justify-content:space-around;
+    cursor: pointer;
   }
 
 .dropdown-content a:hover {
@@ -164,6 +171,7 @@ body{
     transition: 0.3s ;
     color: var(--text-navbar-before-hover);
     margin-left: 30px;
+    cursor: pointer;
 }
 .nav__cart:hover{
     color: var(--text-navbar-after-hover);
@@ -202,6 +210,7 @@ li{
     object-position: center;
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
+    cursor: pointer;
 }
 .img img:hover  {
     -webkit-transform: scale(1.08);
@@ -242,7 +251,7 @@ li{
 }
 .review {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;;
     text-align: center;
     
 }
@@ -253,9 +262,9 @@ li{
     padding-bottom: 30px;
 }
 
-.review_customer img{
+ .review .review_customer img{
     width: 250px; 
-    height: 220px; 
+    height: 250px; 
     border-radius: 100%;
 }
 
@@ -274,9 +283,7 @@ h2 {
     color: var(--main-color)
 }
 
-/* .container {
-    padding-bottom: 30px;
-} */
+
 
 /* ######## handmade ###### */
 .home__products_handmade .img:nth-child(1){
@@ -323,7 +330,7 @@ h2 {
     align-items:center;
 }
 .name__type-product h1{
-    margin: 0 20px;
+    margin:  20px;
     flex:1;
     text-align: center;
     font-size: var(--font-types-product);
@@ -338,6 +345,7 @@ h2 {
 }
 .handmade h1, .handmade h2, .handmade p,.stoneCarving h1, .stoneCarving h2, .stoneCarving p{
     color: var(--text-navbar-after-hover)
+    
 }
 .handmade h1,.stoneCarving h1{
     font-size: var(--h1-font-size)
@@ -378,11 +386,14 @@ h2 {
     margin-top: 10px;
     outline: none;
     border: none;
-    width: 50%;
+    cursor: pointer;
+    width: 90%;
     height: 30px;
     background: var(--text-navbar-before-hover);
     transition: 0.5s;
-    color: var(--title-color-white)
+    color: var(--title-color-white);
+    
+    
 
 }
 .quick_view:hover{
@@ -392,6 +403,9 @@ h2 {
 }
 
 /* stoneCarving page ################ */
+
+
+
 /* ########## About page ########### */
 .about{
     display:none;
@@ -410,7 +424,8 @@ h2 {
     flex:1;
     align-items: center;
 }
-.iamge_about img {
+.image_about img {
+    margin-top: 170px;
     flex:1;
     text-align: center;
     width: 100%;
@@ -434,6 +449,9 @@ h2 {
     gap: 20px;
     grid-template-columns: 50% 50%;
 }
+.text_right {
+   margin-top: 130px;
+}
 
 
 
@@ -454,6 +472,9 @@ h2 {
 } 
 .contact__container h2{
     font-size: var(--h2-font-size);
+}
+.form_right{
+    margin-top: 110px;
 }
 
 .form_right form input, textarea {
@@ -505,6 +526,7 @@ h2 {
 .view_product p, .view_product h1{
     color: var(--text-navbar-after-hover)
 }
+
 .infor_pro{
    width: 95%;
 }
@@ -891,40 +913,38 @@ footer{
     justify-content: space-between;
     align-content: center;
     text-align: left;
-    padding: 100px 200px;
+    padding: 70px 100px;
     max-width:100%;
     height: auto;
+    flex-direction: row;
 }
+
 .footer__info{
     /* margin-left: 200px; */
     width: 33.33333%;
 }
 .footer__infor-text {
     color: var(--title-color-white);
-    font-weight: 200;
+    font-weight: 800;
     font-size: 18px;
+    font-family: var(--body-font);
 } 
 .footer__media{
-    padding-top: 20px;
-    color: var(--title-color-white);
+    padding-top: 10px;
+    
+    color: var(--text-color);
     font-size: 25px;
 
 }  
-.footer__media-icon{
+.footer__media i{
     cursor: pointer;
-    padding-right: 25px;
+    padding-right: 10px;
 }
 .footer__bank{
-    width: 33.33333%;
+    width: 20%;
 }
-.footer__bank-text{
-    color: var(--title-color-white);
-    font-weight: 200;
-    font-size: 18px;
-}
-.footer__bank-icon{
-    padding-top: 20px;
-}
+
+
 .footer__Email{
     /* margin-right: 300px; */
     color: var(--title-color-white);
@@ -945,7 +965,7 @@ footer{
     text-align: center;
 }
 ::placeholder{
-    color: var(--title-color-white);
+    color: var(--text-color);
 }
 .footer__Email-sub input{
     width: 100%;
@@ -959,6 +979,18 @@ footer{
 }
 .footer__Email-sub input:hover{
     background: var(--main-color);
+}
+.footer__infor-text p {
+    color:var(--text-color);
+    font-family: var(--body-font);
+    font-weight: 400;
+    
+}
+.footer__company ul li{
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-weight: 400;
+
 }
 
 
@@ -1832,6 +1864,12 @@ body{
     .img_handmade, .img_stoneCarving{
         width: 100%;
     }
+    .clearFilter{
+        height: 29px;
+        width: 40px;
+        cursor: pointer;
+        padding-left: auto;
+    }
     /* ######## about ############ */
     .About {
         display: grid;
@@ -1844,9 +1882,7 @@ body{
     .FAQ {
         grid-template-columns: 100%;
     }
-    .clearFilter{
-        cursor: pointer;
-    }
+   
     /* ######### contact mobile ########## */
     .contact__container {
         display: grid;

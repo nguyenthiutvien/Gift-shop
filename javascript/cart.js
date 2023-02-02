@@ -137,6 +137,8 @@ function offer(){
   if(promo_code=='abcd'){
     subtotalFinal=getSubtotal-5
     document.getElementById("Total").innerHTML="$"+subtotalFinal+".00";
+    alert("You have 5% off");
+
   }else{
     subtotalFinal=getSubtotal;
     document.getElementById("Total").innerHTML="$"+subtotalFinal+".00";
