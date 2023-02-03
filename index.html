@@ -1,274 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-	<link rel="stylesheet" href="/style/home.css">
-	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-
-	<title>Home</title>
-	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/home.css">
+	<link rel="stylesheet" href="./style/variable.css">
+    <script src="https://kit.fontawesome.com/11a9c95312.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"> 
+    <title>Souvenirs</title>
+    
 </head>
 <body>
-	<div class="header">
-		<ul>
-			<li id="logo"><a href="#"><img src="/assets/img/logo.png" ></a></li>
-			<li><a href="#"><b>HOME</b></a></li>
-			<li><a href="/pages/handmade.html"><b>HANDMADE</b></a></li>
-			<li><a href="pages/StoneCarving.html"><b>STONE CARVING</b></a></li>
-			<li><a href="pages/about.html"><b>ABOUT</b></a></li>
-			<li><a href="pages/contact.html"><b>CONTACT</b></a></li>
-			<li><a href="/pages/login.html"><i class="fas fa-user"></i><b>LOGIN</b></a></li>
-			<link rel="stylesheet" href="/pages/login.html">
-			<li><a onclick="openCart()" ><i class="fas fa-shopping-cart"></i><p id="countpro">0</p></a></li>
-		</ul>
-	</div>
-	  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-		<div class="carousel-inner">
-		  <div class="carousel-item active">
-			<img src="/assets/img/qua2.jpg" class="d-block w-100" alt="...">
-		  </div>
-		  <div class="carousel-item">
-			<img src="/assets/img/qua1.jpg" class="d-block w-100" alt="...">
-		  </div>
-		  <div class="carousel-item">
-			<img src="/assets/img/hopqua2.jpg" class="d-block w-100" alt="...">
-		  </div>
-		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		  <span class="visually-hidden">Next</span>
-		</button>
-	  </div>
-	<div class="container">
-			<div class="row">
-			</div><br><br>
-			<div class="row">
-				<div class="col-4" id="photo">
-					<a href="#"><img src="https://anhdep123.com/wp-content/uploads/2020/05/cay-xuong-rong-tai-tho-sieu-cute.jpg" alt="" style="width: 90%; height: 90%;"></a>
-				</div>
-				<div class="col-4" id="photo">
-					<a href="#"><img src="https://cf.shopee.vn/file/a25cc55f34e013f893c55cf5f1da612d" alt="" style="width: 300px; height: 240px;"></a><br><br>
-					<div class="square"></div>
-				</div>
-				<div class="col-4" id="photo">
-					<div class="square1"></div><br>
-					<a href="#"><img src="https://salt.tikicdn.com/cache/w1200/ts/product/e2/06/a6/75a12581983542dffa33acbbb7754c44.jpg" alt="" style="width: 300px; height: 240px;"></a>	
-				</div>
-			</div><br><br>
-			<div class="row">
-				<div class="col-4">
-					<div class="text">
-						<h5 id="text">Unique Everything</h5>
-						<p>We have a lot of item, so you can <br> find whatever you need.</p>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="text">
-						<h5 id="text1">Secure Shopping</h5>
-						<p>We use best-in-class technology to <br> protect your transactions.</p>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="text">
-						<h5 id="text">Affordable</h5>
-						<p>Our item are reasonably priced,<br> so you can buy them easy</p>
-					</div>
-				</div>
-			</div>
-	</div><hr><br>
-		<div class="h2"><h3>FEATURED PRODUCTS</h3></div><br>
-		<div class="content">
-			<div class="item"><figure><img id="image" src="/assets/img/image4.png" alt="" style="width: 250px;"></figure>
-			<p style="text-align: center;">Bicycle Form Alarm Clock<br> 
-			<span id="price">$12.00</span></p>
-			<button class="button">Quick View</button></div> 
+    <!-- ##### header ######## -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a onclick="openHomePage();removeItemViewCart();closeViewCart()"  class="nav__logo "><img src="./assets/img/logo.png" alt=""></a>
+            <div class="nav__menu" id="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a onclick="openHomePage()" class="nav_link">Home</a>
+                    </li>
+                    <li class="nav__item">  
+                        <a onclick="openHandmadePage()" class="nav__link">Handmade</a>
+                    </li>
+                    <li class="nav__item">
+                        <a onclick="openStoneCarvingPage()" class="nav__link">Stone Carving</a>
+                    </li>
+                    <li class="nav__item">
+                        <a onclick="openAboutPage()" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a onclick="openContactPage()" class="nav__link">Contact</a>
+                    </li>
+                    <!-- <li class="nav__item">
+                        <a onclick="openLogin()" class="nav__login" id="nav_login" ><i class="ri-account-circle-fill nav__login-icon"></i>Login</a>
+                    </li> -->
+                </ul>
+            </div>
+            <button onclick="openLogin()" class="nav__login" id="nav__login"><i class="ri-account-circle-fill nav__login-icon"></i>Login</button>
+            <div class="account" id="account">
+                <button  class="nav__account" id="nav__account" ></button>
+                <div class="dropdown-content">
+                    <a onclick="openSettingAccount()"><span>Setting</span><span><i class="ri-settings-4-fill"></i></span></a>
+                    <a onclick="openHistory()"><span>History</span><span><i class="ri-timer-2-fill"></i></span></a>
+                    <a onclick="signOutAccount()"><span>Sign out</span><span><i class="ri-logout-circle-r-fill"></i></span></a>
+                </div>
+            </div>
+            <a href="#" onclick="openCart()" class="nav__cart"><i class="ri-shopping-cart-2-fill nav__cart-icon"></i><p  style="position: relative;top:-10px ;right: 12px;"  id="countpro1">0</p></a>
+            <a href="#" onclick="openNav()" class="nav__opent"><i class="ri-list-check nav__opent-icon"></i></a>
+        </nav>
+    </header>
+    <main class="main">
 
-			<div class="item"><figure><img id="image" src="/assets/img/image6.png" alt="" style="width: 250px; height: 190px;"></figure>
-			<p style="text-align:centre">Amigurumi Rabbit<br>
-			<span id="price">$10.00</span> </p>
-			<button class="button">Quick View</button></div>
+        <!-- ####################   HOME   ###################### -->
+        <section class="home" id="home">
+            <div class="home__container">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <img src="./assets/img/slide1.jpg" >
+                    </div>
+    
+                    <div class="mySlides fade">
+                      <img src="./assets/img/slide2.jpg" >
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="./assets/img/slide3.jpg" >
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                
+            </div><br><br>
 
-			<div class="item"><figure><img id="image" src="/assets/img/image11.jpg" alt="" style="width: 250px; height: 190px;"></figure>
-			<p style="text-align:centre">Couple stone statue <br>
-			<span id="price">$10.00</span> </p>
-			<button class="button">Quick View</button></div>
+            <p class="title">OUR PRODUCTS</p>
+            <div class="home__products" id="home__products">
+                <div class="home__products_handmade" id="home__products_handmade">
+                    <div class="img name__type-product">
+                        <h1>HANDMADE</h1>
+                    </div>
+                </div>
+                <div class="home__products_stoneCarving" id="home__products_stoneCarving">
+                    <div class="img name__type-product">
+                        <h1>STONE <br> CARVING </h1>
+                    </div>
+                </div>
+                <!-- <div class="home__products_freetype" id="home__products_freetype">
+                
+                </div> -->
+          
+            </div><br><br>
 
-			<div class="item"><figure><img id="image" src="/assets/img/image7.png" alt="" style="width: 250px; height: 190px;"></figure>
-			<p style="text-align:centre">Luxury Scarf<br>
-			<span id="price">$10.00</span> </p>
-			<button class="button">Quick View</button></div> <br>
-	    </div>
-		</div>
-		<div class="content1">
-				<div class="item-img column-img"><figure class="figure-img"><img src="/assets/img/image10.png" alt=""></figure></div>
-				<div class="item-img column-img"><figure class="figure-img"><img src="/assets/img/hopqua2.jpg" alt="" style=" width: 600px; height: 316px;"></figure></div>
-		</div><br>
-			<div class="h2"><h3>NEW PRODUCTS</h3></div><br>
-			<div class="newProducts">
-				<div class="item"><figure><img id="image" src="/assets/img/image12.jpg" alt="" style="width: 250px; height: 190px;"></figure>
-				<p class="text-center">Non La Handmade<br> 
-				<span id="price">$12.00</span></p>
-				<button class="button">Quick View</button></div> 
+            <div class="text__products">
+                <div>
+                    <h3 class="text">Unique Everything</h3>
+                    <p>We have a lot of item, so you can <br> find whatever you need.</p>
+                </div>
+            
+                <div>
+                    <h3 class="text1">Secure Shopping</h3>
+                    <p>We use best-in-class technology<br> to protect your transactions.</p>
+                </div>
+                <div>
+                    <h3 class="text">Affordable</h3>
+                    <p>Our item are reasonably priced,<br> so you can buy them easy</p>
+                </div>
+        </div><br><br>
+        <div class="feedback">
+            <h3 class="customer">CUSTOMER FEEDBACK</h3>
+            <div class="review">
+                <div class="review_customer"><img src="./assets/img/tien.jpg" alt="" ><br><br> <b> A Tiến</b><br>
+                <p>The product very nice and cheap. <br> I am very satisfied with the product </p></div>
+                <div class="review_customer"><img src="./assets/img/vien.jpg" alt="" > <br><br> <b>Út Viên</b>  <br>
+                <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
+                <div class="review_customer"><img src="./assets/img/hthang.jpg" alt="" > <br><br> <b>Hữu Thắng</b>  <br>
+                <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
+                <div class="review_customer"><img src="./assets/img/thuy.jpg" alt="" > <br><br> <b>Thanh Thúy</b>  <br>
+                <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
+            </div>
+        </div>
+        </section>
 
-				<div class="item"><figure><img id="image" src="https://voocbien.com/wp-content/themes/theme2015/images/thuyen-buom-vo-oc.jpg" alt="" style="width: 250px; height: 190px;"></figure>
-				<p style="text-align:centre">Couple stone statue <br> 
-				<span id="price">$10.00</span> </p>
-				<button class="button">Quick View</button></div>
+        <!-- ####################   handmade  ###################### -->
+        <section class="handmade" id="handmade">
+            <div class="handmade__container" id="handmade__container">
+                <h1>Handmade</h1>
+                <div class="handmade__product" id="handmade__product">
+                    <div class="filters filters__handmade" id="filters__handmade">
+                        <h2>Filter by</h2>
+                        <hr width="30%">
+                        <div>
+                            <form>
+                                <p>Price</p>
+                                <input type="radio" id="age1" name="age" value="30" onclick="showFilterPrice1()" >
+                                <label for="age1">0.00$ - 30.00$</label><br>
+                                <input type="radio" id="age2" name="age" value="100" onclick="showFilterPrice2()">
+                                <label for="age2">30.00$ - 100.00$</label><br>  
+                                <input type="radio" id="age3" name="age" value="150" onclick="showFilterPrice3()">
+                                <label for="age3">100.00$ - 150.00$</label><br>
+                                <input type="radio" id="age3" name="age" value="200" onclick="showFilterPrice4()">
+                                <label for="age3">150.00$ - 200.00$</label><br><br>
+                            
+                            </form>
+                        </div>
+                        <hr width="30%">
+                        <div>
+                            <form >
+                                <label for="color" >Color:</label>
+                                <select id="color__list" onchange="showFilterColor1(this)">
+                                    <option value="white"  >White</option>
+                                    <option value="blue"  >Blue</option>
+                                    <option value="grey" >Grey</option>
+                                    <option value="brown" >Brown</option>
+                            </select>   
+                            </form>
+                                                    
+                        </div>
+                        <br>
+                        <br>
 
-				<div class="item"><figure><img id="image" src="assets/img/xichlo.jpg" alt="" style="width: 250px; height: 190px;"></figure>
-				<p style="text-align:centre">Cyclos made of Bamboo<br>
-				<span id="price">$10.00</span> </p>
-				<button class="button">Quick View</button></div>
+                        <button class="clearFilter"onclick ="clearFilter()">Clear Filter</button>           
+                    </div>
+                    <div class="products__list products__list-handmade" id="products__list-handmade">
 
-				<div class="item"><figure><img id="image" src="/assets/img/mockhoa.jpg" alt="" style="width: 250px; height: 190px;"></figure>
-				<p style="text-align:centre">Couple stone statue <br>
-				<span id="price">$10.00</span> </p>
-				<button class="button">Quick View</button></div> <br>
-			</div>
-			<div class="feadback">
-				<h3 class="customer">Customer Feedback</h3>
-				<div class="review">
-					<div class="review_customer"><img src="/assets/img/tien.jpg" alt="" ><br><br> <b> A Tiến</b><br>
-					<p>The product very nice and cheap. <br> I am very satisfied with the product </p></div>
-					<div class="review_customer"><img src="/assets/img/utzien.jpg" alt="" > <br><br> <b>Út Viên</b>  <br>
-					<p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
-					<div class="review_customer"><img src="/assets/img/hthang.jpg" alt="" > <br><br> <b>Hữu Thắng</b>  <br>
-					<p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
-				</div>
-			</div>
-			<section id="subscible">
-				<div class="footer container-fluid">
-					<div class="top-footer" >
-						<div class="subscirebe">
-							<input placeholder="Enter your email here" class="btn1 "></input> <br><br>
-							<br> <br><button type="button" class="btn btn-outline-secondary">SUBSCRIBE NOW</button>
-						</div>
-					</div>
-			</section>		
-				<div class="bottom-footer">
-					<div class="contact">
-						<h4>CONTACT US</h4>
-						<div class="infor">
-							<span class="address">
-								<p> <i class="fa-solid fa-location-dot"></i>
-								Phuoc My, Son Tra, Da Nang</p>
-							</span>
-							<span class="pnumber">
-								<p> <i class="fa-solid fa-phone"></i>
-							   (+84) 38 498 6930</p>
-							</span>
-							<span class="email">
-								<p> <i class="fa-solid fa-envelope"></i>
-								 thangnguyen@.com</p>
-							</span>
-						</div>
-					</div>
-					<div class="company">
-						<h4>COMPANY</h4>
-						<ul>
-							<li><a href="#">HOME</a> </li>
-							<li><a href="">HANDMADE</a> </li>
-							<li><a href="">STONE CARVING</a></li>
-							<li><a href="">ABOUT</a></li>
-							<li><a href="">CONTACT</a></li>
-						</ul>
-					</div>
-					<div class="aboutus">
-						<h4>ABOUT US</h4>
-						<p>We will bring you the <br> best products, hope it is <br>
-						your good memory for <br> Danang City</p>
-						<div class="icon-ab">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-					</div>
-					<div class="btn-footer">
-						<h4>Get promo code now</h4>
-						<input type="text" placeholder="Enter your email here" class="form-control">
-						<br> <br><button type="button" class="btn btn-outline-secondary" style="margin-top:-35px">SUBSCRIBE NOW</button>
-					</div>
-				</div>
-			</div>
-</div>
+                    </div>
 
-<!--view  cart -->
-<section class="view_cart" id="view_cart">
-	<div class ="content_viewCart" id ="content_viewCart">
-		<div class ="content_left">
-			<h2>My cart</h2>
-			<hr>
-			<div class=" product_list_in_view_cart" id="product_list_in_view_cart"></div>
-		</div>
-		<div class="other_infor">
-			<div class="promo_code">
-				<div>
-					<button class="btn_promo_code" onclick="openPromo()">
-						<i class="ri-edit-box-line"></i>
-						Enter a promo code
-					</button>
-				</div>
-				<div id="text_promo_code">
-					<input type="text" id="promo_code">
-					<input type="button" onclick="offer(); checkpromo()" value="Apply">
-				</div>
-			</div>
-			<div class="note_cart">
-				<div>
-					<button class="btn_note_cart" onclick="openNote()">
-					<i class="ri-message-2-line"></i>
-					Add a note
-					</button>
-				</div>
-				<div id ="text_note">
-					<textarea name="note" id="note"></textarea>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="content_right">
-		<h2>Order summary</h2>
-		<hr>
-		<div class="infor_subtotal">
-			<div class="subtotal_right">
-				<p>Subtotal</p>
-				<p id="Subtotal">...</p>
-			</div>
-			<div class="subtotal_right">
-				<p>Shipping</p>
-				<p>Free</p>
-			</div>
-		</div>
-   <hr>
-   <div class="subtotal_right">
-	<p>Total</p>
-	<p id="Total"></p>
-   </div>
-   <div>
-	<h2>Checkout</h2>
-	<form>
-		<label for="Pay_methods">Pay methods:</label>
-		<select  id="payMethod_list" onchange="">
-			<option value="delivery">Payment on delivery</option>
-			<option value="online"> Online payment</option>
-		</select>
-	</form>
-   </div>
-   <div class="btn_buy"> <button class="btn_buynow" onclick="">Buy Now</button>
-</div>
-</div>
-</section>
-<!-- cart -->
-   <div id="myCart" class="overlay__cart">
+                   
+                </div>
+            </div>
+        </section>
+        <!-- ##################### stoneCarving ############ -->
+        <section class="stoneCarving" id="stoneCarving"> 
+            <div class="stoneCarving__container" id="stoneCarving__container">
+                <h1>Stone Carving</h1>
+                <div class="stoneCarving__product" id="stoneCarving__product">
+                    <div class="filters filters__stoneCarving" id="filters__stoneCarving">
+                        <h2>Filter by</h2>
+                        <hr width="30%">
+                        <div>
+                            <form>
+                                <p>Price</p>
+                                <input type="radio" id="age1" name="age" value="30"  onclick="showFilterPrice5()">
+                                <label for="age1">0.00$ - 30.00$</label><br>
+                                <input type="radio" id="age2" name="age" value="100" onclick="showFilterPrice6()">
+                                <label for="age2">30.00$ - 100.00$</label><br>  
+                                <input type="radio" id="age3" name="age" value="150" onclick="showFilterPrice7()">
+                                <label for="age3">100.00$ - 150.00$</label><br>
+                                <input type="radio" id="age3" name="age" value="200" onclick="showFilterPrice8()">
+                                <label for="age3">150.00$ - 200.00$</label><br><br>
+                            </form>
+                            
+                        </div>
+                        <hr width="30%">
+                        <div>
+                            <form >
+                                <label for="color">Color:</label>
+                                <select id="color__list" onchange="showFilterColor2(this)">
+                                    <option value="white">White</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="grey">Grey</option>
+                                    <option value="brown">Brown</option>
+                            </select>   
+                            </form>
+                                                    
+                        </div>
+                        <br>
+                        <br>
+                        <button class="clearFilter" onclick="clearFilter2()">Clear Filter</button>           
+                    </div>
+                    <div class="products__list products__list-stoneCarving" id="products__list-stoneCarving">
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ##################### About #################### -->
+        <section class="about" id="about">
+            <div class="contenter__about">
+                <div class="About">
+                    <div class="text_about" id="text_about">
+                        <h2>About</h2>
+                        <div>
+                        <br>
+                         <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                         <br>
+                         <p>This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
+                        
+                     </div>
+                    </div>
+    
+                    <div class="image_about" id="image_about">
+                        <img src="./assets/img/contact.jpg" alt="">
+                    </div>
+                </div>
+    
+                <div class="FAQ">
+                    <div class="text_left" id="text_left">
+                        <h2>FAQ</h2>
+                        <br>
+                        <div>
+                        <h4>Do you provide International delivery?</h4><br>
+                        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p><r><br>
+                        <h4>How do I return an item?</h4><br>
+                        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p><br><br>
+                        <h4>What is your returns policy?</h4><br>
+                        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+                        </div>
+                    </div>
+                    <div class="text_right" id="text_right">
+                         <br>
+                        <h4>How do I track my order?</h4><br>
+                         <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p><br><br>
+                         <h4>How can I contact your couriers?</h4><br>
+                         <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p><br><br>
+                         <h4>What are your delivery options?</h4>
+                         <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>                     
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </section>
+
+        <!-- ################## Contact ##################### -->
+        <section class="contact" id="contact">
+            <div class="contact__container">
+                <div class="text_left" id="text_left">
+                <h2>Contact</h2>
+                <div>
+                
+                <p>1-800-000-0000<br>
+                info@mysite.com</p><br>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                </div>
+                </div>
+                <div class="form_right" id="form_right">
+                <br>
+                <form>
+                    <div>
+                        <div class="input-container">
+                            <i class="fa fa-user icon"></i>
+                            <input class="input-field" type="text" placeholder="Name" name="Name" id="contact-Name">
+                        </div>
+                        
+                        <div class="input-container">
+                            <i class="fa fa-envelope icon"></i>
+                            <input class="input-field" type="text" placeholder="Email" name="Email" id="contact-Email">
+                        </div>
+                        
+                        <div class="input-container">
+                            <i class="fa fa-book icon"></i>
+                            <input class="input-field" type="text" placeholder="Subject" name="Subject" id="contact-Subject">
+                        </div>
+                        
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-message icon"></i>
+                    <textarea  id="message" placeholder="Message" ></textarea>
+                </div><br>
+                 <button type="button" id ="submit_contact" onclick="addContact()">Submit</button> 
+                </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ################# view products ############ -->
+        <section class="view_products" id="view_products">
+            
+            
+        </section>
+
+        <!-- ############### view Cart ################# -->
+        <section class="view_cart" id="view_cart">
+            <div class="content_viewCart" id="content_viewCart">
+                <div class="content_left">
+                    <h2>My cart</h2>
+                    <hr>
+                    <div class="product_list_in_view_cart" id="product_list_in_view_cart">
+                        
+
+                    </div>
+                    <div class="other_infor">
+                        <div class="promo_code">
+                            <div>
+                                <button class="btn_promo_code" onclick="openPromo()">
+                                    <i class="ri-edit-box-line"></i>
+                                    Enter a promo code
+                                </button>
+                            </div>
+                            <div id="text_promo_code">
+                                <input type="text" id="promo_code">
+                                <input type="button" onclick="offer();checkPromo()" value="Apply">
+                            </div>
+                        </div>
+                        <div class="note_cart">
+                            <div>
+                                <button class="btn_note_cart" onclick="openNote()">
+                                    <i class="ri-message-2-line"></i>
+                                    Add a note
+                                </button>
+                            </div>
+                            <div id="text_note">
+                                <textarea name="note" id="note" ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right">
+                    <h2 id="bill_text">Order summary</h2>
+                    <hr>
+                    <div class="infor_subtotal">
+                        <div class="subtotal_right">
+                            <p>Subtotal</p>
+                            <p id="Subtotal">...</p>
+                        </div>
+                        <div class="subtotal_right">
+                            <p>Shipping</p>
+                            <p>Free</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="subtotal_right">
+                        <p>Total</p>
+                        <p id="Total"></p>
+                    </div>
+                    <div>
+                        <h2>Checkout</h2>
+                        <form >
+                            <label for="Pay_methods">Pay methods:</label>
+                            <select id="payMethod__list" onchange="">
+                                <option value="delivery">Payment on delivery</option>
+                                <option value="online">Online payment </option>
+                        </select>   
+                        </form>
+                    </div>
+                    <div class="divbtn_buynow"><button class="btn_buynow" onclick="checkLogin()">Buy Now</button></div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ############ bill ################### -->
+        <section class="bill" id="bill">
+            <div class="content_bill" id="content_bill">
+                <div class="img_top" id="img_top">
+                    <img src="./assets/img/slide2.jpg" alt="">
+                </div>
+                <div class="content_bottom" id="content_bottom">
+                    <div class="form_info" id="form_info">
+                        <p>Contact Info</p>
+                        <div class="name_cus">
+                            <p>Name <p class ="bug" id="bug6">*</p></p>
+                            <input type="text" id="name_cus" onclick="closeBugNameCus()"></input>
+                        </div>
+                        <div class="phone_number">
+                            <p>Phone Number <p class="bug" id="bug7">*</p> </p>
+                            <input type="text" id="phone_number_cus" onclick="closeBugPhoneNumberCus()"></input>
+                        </div>
+                        <div class="address">
+                            <p>Address <p class="bug" id="bug8">*</p></p>
+                            <input type="text" id="address_cus" onclick="closeBugAddressCus()"></input>
+                        </div>
+                    </div>
+                    <div class="content_order" id="content_order">
+                        <div class="content_pro" id="content_pro">
+
+                        </div>
+                        <hr>
+                        <div class="total">
+                            <p id="totalALl"></p>
+                        </div>                       
+                    </div>
+                    <div class="order" id="order">
+                        <button type="button" id="order" onclick="uploadBillToAPI()">Order</button>
+                        <button type="button" id="cancel" onclick="openHomePage();removeProBill();">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- ##### footer ##### -->
+    <footer class="footer">
+        <div class="content__footer" >
+            <div class="footer__info">
+                <div class="footer__infor-text">
+                    <h4>CONTACT US</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> Son Tra, Da Nang </p>
+                    <p> <i class="fa-solid fa-phone"></i> (+84) 0394827822 </p>
+                    <p><i class="fa-solid fa-envelope"></i> huuthang@gmail.com</p>
+                </div>
+                <div class="footer__media">
+                    <i class="icons icon--point fa-brands fa-pinterest"></i>
+                    <i class="icons icon--facebook fa-brands fa-facebook"></i>
+                    <i class="icons icon--instagram fa-brands fa-instagram"></i>
+                    <i class="icons icon--in fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="footer__bank">
+                <div class="footer__bank-text">
+                    <h4>COMPANY</h4>
+                </div>
+                <div class="footer__company">
+                    <ul>
+                        <li>HOME</li>
+                        <li>HANDMADE</li>
+                        <li>STONE CARVING</li>
+                        <li>ABOUT</li>
+                        <li>CONTACT</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer__Email">
+                <div class="footer__Email-text">
+                   <h4>Get promo code now</h4> 
+                </div>
+                <div class="footer__Email-font">
+                    <input type="text" placeholder="Enter your email here" id="emailuser">
+                </div>
+                <div class="footer__Email-sub">
+                    <input type="button" value="Subscribe Now" onclick="send()" id="subscribe_now">
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+   
+            <!-- ######### mobile ########## -->
+            <div id="myNav" class="overlay">
+                <div class="nav__menu-mobile" id="nav__menu">
+                    <button onclick="closeNav()" class="close1"><i class="ri-close-circle-line"></i></button>
+                    <ul class="nav__list-mobile">
+                        <li class="nav__item-mobile">
+                            <a onclick="openHomePage();closeNav()" class="nav_link">Home</a>
+                        </li>
+                        <li class="nav__item-mobile">
+                            <a onclick="openHandmadePage();closeNav()" class="nav__link">Handmade</a>
+                        </li>
+                        <li class="nav__item-mobile">
+                            <a onclick="openStoneCarvingPage();closeNav()" class="nav__link">Stone Carving</a>
+                        </li>
+                        <li class="nav__item-mobile">
+                            <a onclick="openAboutPage();closeNav()" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item-mobile">
+                            <a onclick="openContactPage();closeNav()" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" onclick="openCart()" class="nav__cart-mobile"><i class="ri-shopping-cart-2-fill nav__cart-icon"></i><p id="countpro2">0</p></a>
+                <br>
+                <button onclick="openLogin()" class="nav__login" id="nav__login_mobile"><div ><i class="ri-user-fill nav__login-icon"></i>Login</div></button>
+                <div class="account__mobile" id="account__mobile">
+                    <button  class="nav__account" id="nav__account_moblile"></button>
+                    <div class="dropdown-content dropdown-content_mobile">
+                    <a onclick="openSettingAccount()"><span>Setting</span><span><i class="ri-settings-4-fill"></i></span></a>
+                    <a onclick="openHistory()"><span>History</span><span><i class="ri-timer-2-fill"></i></span></a>
+                    <a onclick="signOutAccount()"><span>Sign out</span><span><i class="ri-logout-circle-r-fill"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- ######## Login ########## -->
+            <div id="myNav__login" class="overlay__login">
+                <button onclick="closeLogin();openHomePage()" class="close1"><i class="ri-close-circle-line"></i></button>
+                <div class="login__page">
+                    <div class="item__img">
+                        <div class="logins user ">
+                            <div class="login_page">
+                                <div class="login__img">
+                                    <img src="./assets/img/login.png" >
+                                 </div>   
+                                <div class="item__login" id="item__login">
+                                    <form class="form__login">
+                                        <h1>SIGN IN </h1>
+                                        <label class="login_email" >Email</label>
+                                        <input type="text" id="login_email" placeholder="test@gmail.com">
+                                        <label class="login_password" >Password</label>
+                                        <input type="password" id="login_password" placeholder=".......">
+                                        <p>No account <a onclick="next__page(1)">Create one?</a></p>
+                                        <p>Sign in with <a onclick="next__page(-1)">Admin?</a></p>
+                                        <button type="button" onclick="signInAccount()" class="btn_signin">Sign In</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="logins admin">
+                            <div class="login_page">
+                                <div class="login__img">
+                                    <img src="./assets/img/login.png" >
+                                </div>
+                                <div class="item__signup" id="item__signup">
+                                    <form class="form__signup">
+                                        <h1>SIGN UP</h1>
+                                        <label class="signUp__email" id="signUp__email1">Email <p class="bug" id="bug1">*</p></label>
+                                        <input type="text" id="signUp__email" placeholder="test@gmail.com" onclick="closeBugEmail();closeBugEmail2()">
+                                        <label class="signUp_password" id="signUp_password1" >Password <p class="bug" id="bug2">*</p></label>
+                                        <input type="password" id="signUp_password" placeholder="......." onclick="closeBugPassword()">
+                                        <label class="signUp_phone"id="signUp_phone1" >Phone Number <p class="bug" id="bug3">*</p></label>
+                                        <input type="text" id="signUp_phone" placeholder="Enter here" onclick="closeBugPhoneNumber()">
+                                        <label class="signUp_Address" id="signUp_Address1" >Address <p class="bug" id="bug4">*</p></label>
+                                        <input type="text" id="signUp_Address" placeholder="Enter here" onclick="closeBugAddress()">
+                                        <button  type="button"class="btn_signup" onclick="addAccount()"> SIGN UP</button>
+                                        <button  type="button" onclick="next__page(-1)" class="btn_signup">SIGN IN</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- admin -->
+                        <div class="logins admin">
+                            <div class="login_page">
+                                <div class="login__img">
+                                    <img src="./assets/img/login.png" >
+                                </div>
+                                <div class="item__login">
+                                    <form class="form__login">
+                                        <h1>ADMIN</h1>
+                                        <label class="login_email" >Email</label>
+                                        <input type="text" id="login_email_admin" placeholder="test@gmail.com">
+                                        <label class="login_password" >Password</label>
+                                        <input type="password" id="login_password_admin" placeholder=".......">
+                                        <p>Sign in with <a onclick="next__page(1)">User?</a></p>
+                                        <button type="button" onclick="signInAccountAdmin()" class="btn_signin">SIGN IN</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ######## cart ########### -->
+            <div id="myCart" class="overlay__cart">
                 <button onclick="closeCart()" class="close1"><i class="ri-close-circle-line"></i></button>
                 <div class="header_cart">
                     <span><h2>My Cart</h2></span> 
@@ -286,17 +596,87 @@
                         <div class="cart-sub-title">Subtotal</div>
                         <div class="cart-sub-total" id="cart-sub-total"></div>
                     </div>
-                    <button id="viewCart" onclick="remove__view_product();removeItemViewCart();viewCart();openViewCart()">View Cart</button>
+                    <button id="viewCart" onclick="removeViewProduct();removeItemViewCart();viewCart();openViewCart()">View Cart</button>
+                </div>
+            </div>
+            <!-- ######### Setting Account ###### -->
+            <div id="setting_account" class="setting_account">
+                <button onclick="closeSettingAccount()" class="close1"><i class="ri-close-circle-line"></i></button>
+                <div class="your__account" id="your__account">
+                    <h1>Your Account</h1>
+                    <h4>Email Address</h4>
+                    <p id="setting_email"></p>
+                    <hr>
+                    <h4>Password</h4>
+                    <p id="setting_password"></p>
+                    <hr>
+                    <h4>Phone Number</h4>
+                    <p id="setting_phone"></p>
+                    <hr>
+                    <h4>Address</h4>
+                    <p id="setting_address"></p>
+                    <hr>
+                    <button  class="btn__edit" onclick="openFormEdit();showInforUserOld();">Edit</button>
+                </div>
+                <div class="edit__account" id="edit__account">
+                    <h1>Edit Account</h1>
+                    <h4>Email Address</h4>
+                    <input type="text" id="edit_email">
+                    <h4>Password</h4>
+                    <input type="text" id="edit_password">
+                    <h4>Phone Number</h4>
+                    <input type="text" id="edit_phone">
+                    <h4>Address</h4>
+                    <input type="text" id="edit_address">
+                    <button class="btn__done" onclick="doneEditInfo()">Done</button>
+                    <button class="btn__back" onclick="closeFormEdit()">Back</button>
                 </div>
             </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<!-- <script src="./assets/javascript/common.js"></script> -->
-<script src="/assets/javascript/cart.js"></script>
-
-
-</body>
+            <!-- ####### history page ############# -->
+            <div id="history" class="overlay__history">
+                <button onclick="closeHistory()" class="close1"><i class="ri-close-circle-line"></i></button>
+                <header class="header_history" id="header_history">
+                    <h1 class="h1_history">Order History</h1>
+                </header>
+                <main class="main_history" id="main_history">
+                    <div class="content_products" id="content_products">
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>ORDER ID</th>
+                                    <th>ORDER DAY</th>
+                                    <th>PRICE</th>
+                                    <th>STATUS</th>
+                                    <th>VIEW DETAILS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody_history">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
+                <footer class="viewDetailOrder" id="viewDetailOrder">
+                    
+                </footer>
+            </div>
+            
+    <!-- ### Axios###### -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- ### JavaScript #### -->
+<script src = "https://smtpjs.com/v3/smtp.js"> </script>  
+<!-- ######## Sweet Alert ################## -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./javascript/home.js"></script>
+    <script src="./javascript/products.js"></script>
+    <script src="./javascript/handmade.js"></script>
+    <script src="./javascript/stoneCarving.js"></script>
+    <script src="./javascript/cart.js"></script>
+    <script src="./javascript/bills.js"></script>
+	<script src="./javascript/contact.js"></script>
+    
+    
+</body>F
 </html>
