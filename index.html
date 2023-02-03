@@ -281,17 +281,26 @@
                 <div class="form_right" id="form_right">
                 <br>
                 <form>
-                <div>
-                <input type="text" id="Name" placeholder="Name" >    
-                </div><br>
-                <div>
-                <input type="text" id="Email" placeholder="Email">    
-                </div><br>
-                <div>
-                <input type="text" id="Subject" placeholder="Subject">    
-                </div><br>
-                <div>  
-                <textarea  id="message" placeholder="Message" ></textarea>
+                    <div>
+                        <div class="input-container">
+                            <i class="fa fa-user icon"></i>
+                            <input class="input-field" type="text" placeholder="Name" name="Name" id="contact-Name">
+                        </div>
+                        
+                        <div class="input-container">
+                            <i class="fa fa-envelope icon"></i>
+                            <input class="input-field" type="text" placeholder="Email" name="Email" id="contact-Email">
+                        </div>
+                        
+                        <div class="input-container">
+                            <i class="fa fa-book icon"></i>
+                            <input class="input-field" type="text" placeholder="Subject" name="Subject" id="contact-Subject">
+                        </div>
+                        
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-message icon"></i>
+                    <textarea  id="message" placeholder="Message" ></textarea>
                 </div><br>
                  <button type="button" id ="submit_contact" onclick="addContact()">Submit</button> 
                 </form>
