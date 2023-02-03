@@ -91,13 +91,13 @@ function check_form_formBill() {
     }
   }
 }
-function closeBugNameCus() {
+function close_bug_nameCus() {
   document.getElementById("bug6").style.display = "none";
 }
-function closeBugPhoneNumberCus() {
+function close_bug_phone_number_cus() {
   document.getElementById("bug7").style.display = "none";
 }
-function closeBugAddressCus() {
+function close_bug_address_cus() {
   document.getElementById("bug8").style.display = "none";
 }
 
@@ -135,13 +135,13 @@ function getDatatoHistoryPage() {
         var src;
     var statusinAPI =bill.status
     if (statusinAPI=='wait confirm'){
-        src =`img/iconoder.png`;
+        src =`assets/img/wait.png`;
     }else if(statusinAPI=='confirmed'){
-        src =`img/oderthanhcong.png`;
+        src =`assets/img/order.png`;
     }else if(statusinAPI=='shipping'){
-        src =`img/shipping.png`;
+        src =`assets/img/shipping.png`;
      }else{
-        src='img/delivered.png'
+        src='assets/img/order.png'
     };
       if (bill.idCus == idCusLogin) {
         count = count + 1;
@@ -197,18 +197,11 @@ function OrderStatus(id){
     <div class="mainDetail" id="mainDetail${bill.id}">
         
     </div>
-    <div class="footerDetail" id="footerDetail">
-        <ul id="progressbar">
-            <li class="step" id="step1"><img class="icon_detaill" src="img/iconoder.png" alt=""> </li>
-            <li class="step" id="step2"> <img class="icon_detaill" src="img/oderthanhcong.png" alt=""> </li>
-            <li class="step" id="step3"> <img class="icon_detaill" src="img/shipping.png" alt=""> </li>
-            <li class="step" id="step4"> <img class="icon_detaill" src="img/delivered.png" alt=""> </li>
-        </ul>
-    </div>
+   
         `
     })
     getProductArray(id);
-    colorIcon(id);
+   
 }
 
 // lấy sản phẩm từ mảng trong đối tượng
@@ -235,32 +228,6 @@ function getProductArray(id){
     })
 }
 
-function colorIcon(id){
-    getDataBill(id)
-    .then((res) =>{
-        var statusinAPI =res.data.status
-        if (statusinAPI=='wait confirm'){
-            document.getElementById('step1').style.border ="5px solid var(--text-navbar-after-hover)";
-            document.getElementById('step2').style.border="5px solid rgb(145, 145, 145)";
-            document.getElementById('step3').style.border="5px solid rgb(145, 145, 145)";
-            document.getElementById('step4').style.border="5px solid rgb(145, 145, 145)";
-        }else if(statusinAPI=='confirmed'){
-            document.getElementById('step1').style.border="5px solid var(--text-navbar-after-hover)";
-            document.getElementById('step2').style.border="5px solid var(--text-navbar-after-hover)";
-            document.getElementById('step3').style.border="5px solid rgb(145, 145, 145)";
-            document.getElementById('step4').style.border="5px solid rgb(145, 145, 145)";
-        }else if(statusinAPI=='shipping'){
-            document.getElementById('step1').style.border="5px solid var(--text-navbar-after-hover)";
-            document.getElementById('step2').style.border="5px solid var(--text-navbar-after-hover)";
-            document.getElementById('step3').style.border="5px solid var(--text-navbar-after-hover)";
-            document.getElementById('step4').style.border="5px solid rgb(145, 145, 145)";
-         }else{
-            document.getElementById('step1').style.border="5px solid var(--text-navbar-after-hover)";
-            document.getElementById('step2').style.border="5px solid var(--text-navbar-after-hover)";
-            document.getElementById('step3').style.border="5px solid var(--text-navbar-after-hover)";
-            document.getElementById('step4').style.border="5px solid var(--text-navbar-after-hover)";
-        };
-    })
 
-}
+
 //  mua lại sản phẩm

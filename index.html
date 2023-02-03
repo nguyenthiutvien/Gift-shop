@@ -33,6 +33,9 @@
                     <li class="nav__item">
                         <a onclick="openContactPage()" class="nav__link">Contact</a>
                     </li>
+                    <!-- <li class="nav__item">
+                        <a onclick="openLogin()" class="nav__login" id="nav_login" ><i class="ri-account-circle-fill nav__login-icon"></i>Login</a>
+                    </li> -->
                 </ul>
             </div>
             <button onclick="openLogin()" class="nav__login" id="nav__login"><i class="ri-account-circle-fill nav__login-icon"></i>Login</button>
@@ -44,7 +47,7 @@
                     <a onclick="signOutAccount()"><span>Sign out</span><span><i class="ri-logout-circle-r-fill"></i></span></a>
                 </div>
             </div>
-            <a href="#" onclick="openCart()" class="nav__cart"><i class="ri-shopping-cart-2-fill nav__cart-icon"></i><p id="countpro1">0</p></a>
+            <a href="#" onclick="openCart()" class="nav__cart"><i class="ri-shopping-cart-2-fill nav__cart-icon"></i><p  style="position: relative;top:-10px ;right: 12px;"  id="countpro1">0</p></a>
             <a href="#" onclick="openNav()" class="nav__opent"><i class="ri-list-check nav__opent-icon"></i></a>
         </nav>
     </header>
@@ -83,6 +86,9 @@
                         <h1>STONE <br> CARVING </h1>
                     </div>
                 </div>
+                <div class="home__products_freetype" id="home__products_freetype">
+                
+                </div>
           
             </div><br><br>
 
@@ -110,7 +116,7 @@
                 <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
                 <div class="review_customer"><img src="./assets/img/hthang.jpg" alt="" > <br><br> <b>Hữu Thắng</b>  <br>
                 <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
-                <div class="review_customer"><img src="./assets/img/hthang.jpg" alt="" > <br><br> <b>Thanh Thúy</b>  <br>
+                <div class="review_customer"><img src="./assets/img/thuy.jpg" alt="" > <br><br> <b>Thanh Thúy</b>  <br>
                 <p>The product very nice and cheap. <br> I am very satisfied with the product</p></div>
             </div>
         </div>
@@ -287,7 +293,7 @@
                 <div>  
                 <textarea  id="message" placeholder="Message" ></textarea>
                 </div><br>
-                 <button type="button" id ="submit_contact">Submit</button> 
+                 <button type="button" id ="submit_contact" onclick="addContact()">Submit</button> 
                 </form>
                 </div>
             </div>
@@ -336,7 +342,7 @@
                     </div>
                 </div>
                 <div class="content_right">
-                    <h2>Order summary</h2>
+                    <h2 id="bill_text">Order summary</h2>
                     <hr>
                     <div class="infor_subtotal">
                         <div class="subtotal_right">
@@ -372,7 +378,7 @@
         <section class="bill" id="bill">
             <div class="content_bill" id="content_bill">
                 <div class="img_top" id="img_top">
-                    <img src="./asset/img/slide2.jpg" alt="">
+                    <img src="./assets/img/slide2.jpg" alt="">
                 </div>
                 <div class="content_bottom" id="content_bottom">
                     <div class="form_info" id="form_info">
@@ -419,10 +425,10 @@
                     <p><i class="fa-solid fa-envelope"></i> huuthang@gmail.com</p>
                 </div>
                 <div class="footer__media">
-                    <i class="fa-brands fa-pinterest"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="icon icon--point fa-brands fa-pinterest"></i>
+                    <i class="icon icon--facebook fa-brands fa-facebook"></i>
+                    <i class="icon icon--instagram fa-brands fa-instagram"></i>
+                    <i class="icon icon--in fa-brands fa-linkedin"></i>
                 </div>
             </div>
             <div class="footer__bank">
@@ -448,7 +454,7 @@
                     <input type="text" placeholder="Enter your email here" id="emailuser">
                 </div>
                 <div class="footer__Email-sub">
-                    <input type="button" value="Subscribe Now" onclick="send()">
+                    <input type="button" value="Subscribe Now" onclick="send()" id="subscribe_now">
                 </div>
             </div>
 
@@ -662,5 +668,6 @@
     <script src="./javascript/bills.js"></script>
 	<script src="./javascript/contact.js"></script>
     
-</body>
+    
+</body>F
 </html>

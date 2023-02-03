@@ -38,7 +38,7 @@ function show_products(){
                     </div>
                 `;
                 }else{
-                    document.getElementById('home__products_bedroom').innerHTML+=`
+                    document.getElementById('home__products_freetype').innerHTML+=`
                     <div class="img img${pro.id}" onclick="viewProduct(${pro.id})">
                         <img src="${pro.image}" alt="">
                     </div>

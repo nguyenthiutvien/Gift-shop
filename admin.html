@@ -29,7 +29,7 @@
                             <article class="p-4 rounded shadow-sm " id="pro1">
                                 <a  class="d-flex align-items-center">
                                     <span class="bi bi-box h5"><i class="ri-profile-line icon" id="icon1"></i></span>
-                                    <h5 class="ml-2" id="color-z" onclick="showproducts();changeColor1()">Products</h5>
+                                    <h5 class="ml-2" id="color-z" onclick="showproducts(),changeColor1();">Products</h5>
                                 </a>
                             </article>
                         </div>
@@ -37,7 +37,7 @@
                             <article class="p-4 rounded shadow-sm  " id="pro2">
                                 <a  class="d-flex align-items-center">
                                     <span class="bi bi-person h5"><i class="ri-map-pin-user-line icon" id="icon2"></i></span>
-                                    <h5 class="ml-2" id ="color-x" onclick="showcustomer();changeColor2()">Customer</h5>
+                                    <h5 class="ml-2" id ="color-x" onclick="showcustomer(),changeColor1();">Customer</h5>
                                 </a>
                             </article>
                         </div>
@@ -45,7 +45,7 @@
                             <article class="p-4 rounded shadow-sm " id="pro3">
                                 <a  class="d-flex align-items-center">
                                     <span class="bi bi-person-check h5"><i class="ri-shopping-cart-2-line icon" id="icon3"></i></span>
-                                    <h5 id ="color-y" class="ml-2" onclick="showorders();changeColor3()">Orders</h5>
+                                    <h5 id ="color-y" class="ml-2" onclick="showorders(),changeColor1();">Orders</h5>
                                 </a>
                             </article>
                         </div>
@@ -66,7 +66,8 @@
                                     <input type="text" id="price" placeholder="Enter price"><br>
                                     <label for="">Image</label>
                                     <input type="text" id="image" placeholder="Enter link image"><br>
-                                    <label for="">Color</label><br>
+                                    
+                                    <label for="">Color</label> <br>
                                     <div class="color">
                                         <input type="radio" name="color" id="color1" value="female">Blue
                                         <input type="radio" name="color" id="color2" value="other"> White
@@ -79,14 +80,17 @@
                                        
                                     </div>
                                     <label for="">Info</label><br>
-                                    <textarea name="" id="infor"></textarea><br><br>
+                                    <textarea name="" id="infor"></textarea><br> <br>
                                     <div class="add_update">
                                         <button id='add' onclick="add()">Add</button>
-                                        <button id='update' onclick="update(document.getElementById('update').value)">Edit</button>
+                                        <div id="update" >
+                                            <button type="button" id="edit" onclick="update()">Edit</button>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- products -->
                             <div class="tables">
                                 <table class="table">
                                     <h2 class="mo">Product</h2>

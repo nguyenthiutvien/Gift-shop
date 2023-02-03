@@ -16,8 +16,6 @@ function getData() {
         )
 }
 var dem = 0;
-
-
 function show(arr) {
     
     for (let i = 0; i < arr.data.length; i++) {
@@ -57,10 +55,15 @@ function add() {
     var name1 = document.getElementById('product-name').value
     var price = document.getElementById('price').value
     var img = document.getElementById('image').value
+    //  var color=document.getElementById('color').value = res.data.type.color
+    //  var for  = document.getElementById('for').value = res.data.type.for;
+    // var infor =      document.getElementById('infor').value = res.data.info
+
     var data = {
         name: name1,
         price: price,
-        image: img
+        image: img,
+       
     }
     axios.post(APIconfirm, data)
     .then(()=>swal({
@@ -82,31 +85,39 @@ function getdatafromtable(id) {
             document.getElementById('product-name').value = res.data.name;
             document.getElementById('price').value = res.data.price;
             document.getElementById('image').value = res.data.image;
-            document.getElementById('color').value = res.data.type.color;
-            document.getElementById('for').value = res.data.type.for;
+            // document.getElementById('color').value = res.data.type.color;
+            // document.getElementById('for').value = res.data.type.for;
+            document.getElementById('infor').value = res.data.info;
             document.getElementById('add').style.display = 'block';
+            
             // none
-            document.getElementById('update').style.display = 'block';
+
             document.getElementById('update').value = res.data.id
         })
+        document.getElementById('update').innerHTML = `<button type="button" id='edit' onclick="update(${id})">Edit</button>`;
+
 }
 
 function update(id) {
     var name1 = document.getElementById('product-name').value
     var price = document.getElementById('price').value
     var img = document.getElementById('image').value
-    var color = document.getElementById('color').value
-    var for_type = document.getElementById('for').value
+    
+
+// var color = document.getElementById('color').value
+//     var for_type = document.getElementById('for').value
 
     var data = {
         name: name1,
         price: price,
         image: img,
-        color: color,
-        for: for_type
+        // color: color,
+        // for: for_type
     }
+
     axios.put(`${APIconfirm}/${id}`, data)
-    .then(()=>
+    .then(()=>  
+
     swal({
         title: "Success!",
         text: "Updated",
@@ -115,8 +126,8 @@ function update(id) {
       }))
     .then(() => { location.reload() });
     reset()
-    document.getElementById('add').style.display = 'block';
-    document.getElementById('update').style.display = 'block';
+    // document.getElementById('add').style.display = 'block';
+    // document.getElementById('update').style.display = 'block';
     // none
 }
 
@@ -135,13 +146,13 @@ function deleteproduct(id) {
     )
 }
 
-function openNav() {
-    document.getElementById("myNav").style.display = "block";
-}
+// function openNav() {
+//     document.getElementById("myNav").style.display = "block";
+// }
 
-function closeNav() {
-    document.getElementById("myNav").style.display = "none";
-}
+// function closeNav() {
+//     document.getElementById("myNav").style.display = "none";
+// }
 
 // phần trang product
 function showproducts() {
@@ -200,7 +211,7 @@ function showbill(id) {
                     document.getElementById('content_infor').innerHTML += `
                 <div class="infor_detail">
                     <p>ID: ${bill.id}</p>
-                    <p>Product: ${bill.nameCus}</p>
+                    <p>Name : ${bill.nameCus}</p>
                     <p>Total: ${bill.total}</p>
                     <form>
                     <div>
@@ -309,40 +320,6 @@ function updateStatus4(id){
     axios.put(bill_api +"/"+ id,formData);
 }
 
-// đổi màu
-function changeColor1(){
-    document.getElementById('pro1').style.background ="rgb(95,158,160)";
-    document.getElementById('color-z').style.color ="white";
-    document.getElementById('color-y').style.color ="rgb(95,158,160)";
-    document.getElementById('color-x').style.color ="rgb(95,158,160)";
-    document.getElementById('icon2').style.color ="rgb(95,158,160)";
-    document.getElementById('icon3').style.color ="rgb(95,158,160)";
-    document.getElementById('icon1').style.color ="white";
-    document.getElementById('pro2').style.background="white";
-    document.getElementById('pro3').style.background="white";
-}
-function changeColor2(){
-    document.getElementById('pro1').style.background="white";
-    document.getElementById('pro2').style.background ="rgb(95,158,160)";
-    document.getElementById('color-z').style.color ="rgb(95,158,160)";
-    document.getElementById('color-y').style.color ="rgb(95,158,160)";
-    document.getElementById('icon1').style.color ="rgb(95,158,160)";
-    document.getElementById('icon2').style.color ="white";
-    document.getElementById('color-x').style.color ="white";
-    document.getElementById('icon3').style.color ="rgb(95,158,160)";
-    document.getElementById('pro3').style.background="white";
-}
-function changeColor3(){
-    document.getElementById('pro1').style.background="white";
-    document.getElementById('pro3').style.background ="rgb(95,158,160)";
-    document.getElementById('icon2').style.color ="rgb(95,158,160)";
-    document.getElementById('color-x').style.color ="rgb(95,158,160)";
-    document.getElementById('color-y').style.color ="white";
-    document.getElementById('color-z').style.color ="rgb(95,158,160)";
-    document.getElementById('icon1').style.color ="rgb(95,158,160)";
-    document.getElementById('icon3').style.color ="white";
-    document.getElementById('pro2').style.background="white";
-}
 
 // show danh sách bill
 function convertDate(date) {
@@ -440,7 +417,7 @@ function getProductArray(id){
                     <h5 class="name_product">${pro.name}</h5>
                     <p class="qty_product"> Qt: ${pro.qty} </p>
                     <h4 class=""> <span class="mt-5">$</span> ${pro.price}</h4>
-                    <p class="text-muted">Estimated delivery date: <span class="Today">20/11/2002</span></p>
+                   
                 </div>
                 <div>
                     <img class="imginDetail" src="${pro.image}" alt="">
@@ -464,3 +441,37 @@ function openStatusOrder() {
     document.getElementById("container_order").style.display="block"
   
   }
+
+  function changeColor1(){
+    document.getElementById('pro1').style.background ="rgb(95,158,160)";
+    document.getElementById('color-z').style.color ="white";
+    document.getElementById('color-y').style.color ="rgb(95,158,160)";
+    document.getElementById('color-x').style.color ="rgb(95,158,160)";
+    document.getElementById('icon2').style.color ="rgb(95,158,160)";
+    document.getElementById('icon3').style.color ="rgb(95,158,160)";
+    document.getElementById('icon1').style.color ="white";
+    document.getElementById('pro2').style.background="white";
+    document.getElementById('pro3').style.background="white";
+}
+function changeColor2(){
+    document.getElementById('pro1').style.background="white";
+    document.getElementById('pro2').style.background ="rgb(95,158,160)";
+    document.getElementById('color-z').style.color ="rgb(95,158,160)";
+    document.getElementById('color-y').style.color ="rgb(95,158,160)";
+    document.getElementById('icon1').style.color ="rgb(95,158,160)";
+    document.getElementById('icon2').style.color ="white";
+    document.getElementById('color-x').style.color ="white";
+    document.getElementById('icon3').style.color ="rgb(95,158,160)";
+    document.getElementById('pro3').style.background="white";
+}
+function changeColor3(){
+    document.getElementById('pro1').style.background="white";
+    document.getElementById('pro3').style.background ="rgb(95,158,160)";
+    document.getElementById('icon2').style.color ="rgb(95,158,160)";
+    document.getElementById('color-x').style.color ="rgb(95,158,160)";
+    document.getElementById('color-y').style.color ="white";
+    document.getElementById('color-z').style.color ="rgb(95,158,160)";
+    document.getElementById('icon1').style.color ="rgb(95,158,160)";
+    document.getElementById('icon3').style.color ="white";
+    document.getElementById('pro2').style.background="white";
+}

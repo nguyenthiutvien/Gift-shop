@@ -196,6 +196,8 @@ function sign_in_successful() {
     "<h1>Hi! Welcome to Gift Shop </h1>" +
     "<br><p>Change the look of your house, change the perspective of others</p>";
   document.getElementById("item__login").innerHTML = content;
+
+  
 }
 // thông báo khi đăng nhập sai!
 function sign_in_failed() {
@@ -379,7 +381,7 @@ function openContactPage() {
 if (window.localStorage.getItem(CUSID) != "") setAccount();
 
 // bắt đăng nhập khi muốn mua
-function Check_login(){
+function checkLogin(){
   if(window.localStorage.getItem(CUSID) == ""){
     removeItemInArray(0);
     closeViewCart();
@@ -402,7 +404,10 @@ function signInAccountAdmin() {
     var adminArr = res.data;
     for (var admin of adminArr) {
       if (email == admin.email && password == admin.password) {
-        window.location.href="http://127.0.0.1:5502/admin.html"
+        window.location.href='./admin.html'
+    }else{
+      alert("This account does not exist");
+
     }
   }
   
@@ -423,7 +428,10 @@ function sendEmail(email) {
 	Password : "foykcgfdzgolgsua",
 	To : `${email}`,
 	From : "ntuv003@gmail.com",
-	Subject : "Promo code form INDOOR",
+	Subject : "Promo code form Gift store",
 	Body : "Promo code: ABCD",
-	});
+	})
+  .then(
+    alert("")
+  );
 }
