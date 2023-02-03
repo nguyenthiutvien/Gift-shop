@@ -429,9 +429,9 @@ function sendEmail(email) {
 	To : `${email}`,
 	From : "ntuv003@gmail.com",
 	Subject : "Promo code form Gift store",
-	Body : "Promo code: ABCD",
+	Body : "Promo code: abcd",
 	})
   .then(
-    alert("")
+    alert("Please check your email!")
   );
 }

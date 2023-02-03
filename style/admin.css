@@ -445,3 +445,26 @@ a:hover {
     color:var(--text-navbar-after-hover);
     font-size: 40px;
 }
+
+.header_admin {
+    background-color: black;
+    width: 215px;
+    border-radius: 10px;
+}
+#create {
+    font-size: 6em;
+    font-weight: 500;
+    color: #353b48;
+    letter-spacing: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+#create:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}

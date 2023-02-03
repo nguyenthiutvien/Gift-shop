@@ -724,9 +724,9 @@ h2 {
     color: var(--text-navbar-after-hover);
     
 }
-#bill_text{
-    margin-top: 90px;
-}
+/* #bill_text{
+    margin-top: 10px;
+} */
 #payMethod__list{
     border: 1px solid var(--text-navbar-after-hover);
     color: var(var(--text-navbar-after-hover));
@@ -950,7 +950,7 @@ footer{
     column-gap: 20px;
 }
 
-.icon {
+.icons {
     width: 20px;
     height: 35px;
     padding-left: 10px;
@@ -958,7 +958,7 @@ footer{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 19px;
+    font-size: 26px;
     color: #fff;
     border-radius: 100%;
     outline: 2px solid #fff;
@@ -997,11 +997,11 @@ footer{
     40%{transform: rotate(-15deg);}
 }
 
-.icon:hover {
+.icons:hover {
     outline-offset: 4px;
 }
 
-.icon:hover i {
+.icons:hover i {
     animation: shake .25s;
 }
 
@@ -1227,7 +1227,7 @@ body{
 .header_cart h2{
     width: 100%;
     height:100%;
-    margin:50px auto;
+    margin:10px auto;
     font-size: 40px;
     color: var(--title-color-teal);
     font-weight: 300;

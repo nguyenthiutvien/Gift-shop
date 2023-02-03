@@ -73,7 +73,7 @@ function uploadBillToAPI() {
   }
 }
 
-// check font đăng nhập
+// check form đăng nhập
 function check_form_formBill() {
   var nameCus = document.getElementById("name_cus").value;
   var phone_number_cus = document.getElementById("phone_number_cus").value;
