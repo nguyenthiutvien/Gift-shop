@@ -485,13 +485,14 @@ h2 {
     color: var(--title-color-teal);
     outline:none;
     border: 1px solid var(--title-color-teal);
+    padding-left: 20px;
 }
 .form_right form input{
     height: 30px;
 }
 .form_right form input::placeholder, textarea::placeholder{
     color: var(--title-color-teal);
-    padding-left: 20px;
+    padding-left: 0px;
 }
 #submit_contact{
     width:100%;
